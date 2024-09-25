@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Principal</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Documenterio</h1>
+
+      <div class="button-container">
+        <button class="btn" onclick="window.location.href='/pagina1'">
+          Microservices
+        </button>
+        <button class="btn" onclick="window.location.href='/pagina2'">
+          API_gateway
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
