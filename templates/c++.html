@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Documentação de C++</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documentação de C++</h1>
+
+        <p>C++ é uma linguagem de programação de propósito geral, criada por Bjarne Stroustrup em 1983, como uma extensão da linguagem C. Suporta vários paradigmas de programação, incluindo a programação procedural, orientada a objetos e genérica. É amplamente utilizada no desenvolvimento de sistemas, aplicações, jogos, entre outros.</p>
+
+        <h2>1. Estrutura Básica de um Programa em C++</h2>
+
+        <pre><code>#include &lt;iostream&gt;  // Biblioteca para entrada e saída de dados
+
+int main() {
+    std::cout &lt;&lt; "Olá, Mundo!" &lt;&lt; std::endl;  // Exibe "Olá, Mundo!" no ecrã
+    return 0;  // Indica que o programa terminou corretamente
+}
+</code></pre>
+
+        <p><strong>Explicação:</strong></p>
+        <ul>
+            <li><code>#include &lt;iostream&gt;</code>: Inclui a biblioteca de entrada e saída, que permite o uso de <code>std::cout</code>.</li>
+            <li><code>int main()</code>: Função principal do programa. A execução começa aqui.</li>
+            <li><code>std::cout</code>: Usado para imprimir mensagens no ecrã.</li>
+            <li><code>return 0</code>: Indica que o programa terminou com sucesso.</li>
+        </ul>
+
+        <h2>2. Variáveis e Tipos de Dados</h2>
+        <p>Em C++, as variáveis precisam ser declaradas com um tipo de dado. Alguns dos tipos básicos são:</p>
+
+        <pre><code>int idade = 25;          // Inteiro
+float altura = 1.75f;    // Número decimal (float)
+double peso = 70.5;      // Número decimal (double)
+char inicial = 'A';      // Caractere
+bool isAdulto = true;    // Booleano (verdadeiro ou falso)
+</code></pre>
+
+        <h2>3. Estruturas de Controle</h2>
+
+        <h3>3.1 Condicionais</h3>
+
+        <pre><code>int idade = 20;
+
+if (idade &gt;= 18) {
+    std::cout &lt;&lt; "É adulto." &lt;&lt; std::endl;
+} else {
+    std::cout &lt;&lt; "Não é adulto." &lt;&lt; std::endl;
+}
+</code></pre>
+
+        <h3>3.2 Ciclos</h3>
+
+        <h4>Ciclo <code>for</code>:</h4>
+
+        <pre><code>for (int i = 0; i &lt; 5; i++) {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+}
+</code></pre>
+
+        <h4>Ciclo <code>while</code>:</h4>
+
+        <pre><code>int contador = 0;
+while (contador &lt; 5) {
+    std::cout &lt;&lt; contador &lt;&lt; std::endl;
+    contador++;
+}
+</code></pre>
+
+        <h2>4. Funções</h2>
+        <p>As funções permitem dividir o código em blocos reutilizáveis.</p>
+
+        <pre><code>int soma(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int resultado = soma(3, 4);
+    std::cout &lt;&lt; "A soma é: " &lt;&lt; resultado &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+        <h2>5. Programação Orientada a Objetos (POO)</h2>
+        <p>C++ suporta programação orientada a objetos, com conceitos como classes e herança.</p>
+
+        <h3>5.1 Classes</h3>
+
+        <pre><code>class Pessoa {
+public:
+    std::string nome;
+    int idade;
+
+    void apresentar() {
+        std::cout &lt;&lt; "Olá, meu nome é " &lt;&lt; nome &lt;&lt; " e tenho " &lt;&lt; idade &lt;&lt; " anos." &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Pessoa p;
+    p.nome = "João";
+    p.idade = 30;
+    p.apresentar();
+    return 0;
+}
+</code></pre>
+
+        <h3>5.2 Herança</h3>
+
+        <pre><code>class Animal {
+public:
+    void som() {
+        std::cout &lt;&lt; "O animal faz um som." &lt;&lt; std::endl;
+    }
+};
+
+class Cachorro : public Animal {
+public:
+    void som() {
+        std::cout &lt;&lt; "O cachorro late." &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Cachorro c;
+    c.som();  // Chama a versão de "som" da classe Cachorro
+    return 0;
+}
+</code></pre>
+
+        <h2>6. Manipulação de Ponteiros</h2>
+        <p>C++ permite a manipulação de ponteiros, que são variáveis que armazenam endereços de memória.</p>
+
+        <pre><code>int x = 10;
+int* p = &amp;x;  // 'p' armazena o endereço de 'x'
+
+std::cout &lt;&lt; "O valor de x: " &lt;&lt; *p &lt;&lt; std::endl;  // Desreferenciação: acessa o valor apontado por 'p'
+</code></pre>
+
+        <h2>7. Bibliotecas Standard (STL)</h2>
+        <p>A Standard Template Library (STL) do C++ inclui estruturas de dados como <code>vector</code>, <code>map</code>, entre outros.</p>
+
+        <h3>7.1 Vector</h3>
+
+        <pre><code>#include &lt;vector&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::vector&lt;int&gt; numeros = {1, 2, 3, 4, 5};
+
+    for (int num : numeros) {
+        std::cout &lt;&lt; num &lt;&lt; std::endl;
+    }
+    return 0;
+}
+</code></pre>
+
+        <h2>8. Entrada e Saída de Dados</h2>
+        <p>C++ usa <code>cin</code> e <code>cout</code> para entrada e saída de dados.</p>
+
+        <pre><code>int idade;
+std::cout &lt;&lt; "Digite a sua idade: ";
+std::cin &gt;&gt; idade;  // Lê a entrada do utilizador
+std::cout &lt;&lt; "A sua idade é: " &lt;&lt; idade &lt;&lt; std::endl;
+</code></pre>
+
+        <h2>9. Conclusão</h2>
+        <p>C++ é uma linguagem poderosa e flexível, com suporte para diferentes paradigmas de programação. Esta documentação cobre apenas os fundamentos, e a linguagem tem muitos recursos avançados como templates, gestão de memória, exceções e muito mais.</p>
+
+        <p>Para mais detalhes, pode consultar a documentação oficial do C++ nos seguintes sites:</p>
+        <ul>
+            <li><a href="https://en.cppreference.com" target="_blank">C++ Reference</a></li>
+            <li><a href="https://isocpp.org" target="_blank">ISO C++</a></li>
+        </ul>
+    </div>
+</body>
+</html>
