@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentário sobre Banco de Dados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+  <body>
+    <header>
+      <h1>Documentário sobre Banco de Dados</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Introdução</h2>
+        <p>
+          Os bancos de dados são fundamentais para o armazenamento e
+          gerenciamento de informações em diversas aplicações. Neste
+          documentário, vamos explorar propriedades essenciais, estratégias de
+          backup e recuperação, além de escalabilidade e replicação em bancos de
+          dados.
+        </p>
+      </section>
+
+      <section>
+        <h2>ACID: Propriedades Essenciais dos Bancos de Dados</h2>
+        <p>
+          ACID é um acrônimo que representa as propriedades de Atomicidade,
+          Consistência, Isolamento e Durabilidade. Essas propriedades garantem
+          que as transações sejam processadas de maneira segura e confiável.
+        </p>
+        <ul>
+          <li>
+            <strong>Atomicidade:</strong> Garantia de que uma transação é
+            completada em sua totalidade ou não é realizada.
+          </li>
+          <li>
+            <strong>Consistência:</strong> Os dados devem permanecer em um
+            estado consistente antes e depois da transação.
+          </li>
+          <li>
+            <strong>Isolamento:</strong> Transações simultâneas não devem
+            interferir umas nas outras.
+          </li>
+          <li>
+            <strong>Durabilidade:</strong> Uma vez que uma transação é
+            confirmada, os dados permanecem válidos mesmo em caso de falha.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Backups e Recuperação</h2>
+        <p>
+          Realizar backups regulares é crucial para garantir a integridade dos
+          dados. Existem métodos de backup total e incremental, e um bom plano
+          de recuperação é essencial para restaurar dados em caso de perda.
+        </p>
+      </section>
+
+      <section>
+        <h2>Escalabilidade e Replicação</h2>
+        <p>
+          A escalabilidade refere-se à capacidade de um sistema de crescer e
+          lidar com aumentos na carga de trabalho. Isso pode ser feito
+          verticalmente (aumentando recursos de uma única máquina) ou
+          horizontalmente (adicionando mais máquinas). A replicação de dados é
+          utilizada para melhorar a disponibilidade e a confiabilidade do
+          sistema.
+        </p>
+      </section>
+
+      <section>
+        <h2>Conclusão</h2>
+        <p>
+          Compreender as propriedades ACID, a importância dos backups e a
+          escalabilidade são fundamentais para a administração eficaz de bancos
+          de dados. À medida que a tecnologia avança, novas abordagens e
+          práticas continuam a emergir, garantindo que os bancos de dados
+          permaneçam uma parte vital da infraestrutura de TI.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2024 Documentário sobre Banco de Dados. Todos os direitos
+        reservados.
+      </p>
+    </footer>
+  </body>
+</html>
