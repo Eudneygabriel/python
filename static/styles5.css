@@ -1,4 +1,99 @@
 body {
+
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #007bff;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  text-align: center; /* Centraliza a navegação */
+  margin: 20px 0;
+}
+
+nav ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding da lista */
+}
+
+nav ul li {
+  display: inline; /* Exibe os itens da lista em linha */
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+nav a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #007bff; /* Cor azul para os links */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #007bff; /* Alterando para azul */
+  text-align: center; /* Centraliza os títulos */
+}
+
+.introducao,
+#instalacao,
+#sintaxe,
+#tipos-dados,
+#controle-fluxo,
+#funcoes,
+#modulos,
+#excecoes,
+#bibliotecas,
+#recursos {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: center; /* Centraliza o texto dos parágrafos */
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left; /* Mantém as listas alinhadas à esquerda */
+}
+
+ol {
+  padding-left: 20px; /* Adiciona um padding à lista ordenada */
+}
+
+pre {
+  background-color: #f8f8f8; /* Cor de fundo para o código */
+  padding: 10px; /* Padding para o código */
+  border-radius: 5px; /* Bordas arredondadas */
+  overflow-x: auto; /* Permite rolagem horizontal se necessário */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+
     font-family: Arial, sans-serif;
     background-color: #f0f4f8;
     color: #333;
@@ -58,4 +153,5 @@ a {
 
 a:hover {
     text-decoration: underline;
+
 }

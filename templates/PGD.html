@@ -1,99 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <!-- Metadados essenciais -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentaçãodo projeto Plantaforma de Gerenciamento de Desempregados</title>
-    
-    <!-- Estilos CSS para formatação básica -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px auto;
-            max-width: 800px;
-            line-height: 1.6;
-            text-align: center;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p, ul {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        /* Estilo para listas */
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Título Principal -->
-    <h1>Documentação Plantaforma de Gerenciamento de Desempregados</h1>
-    
-    <!-- Introdução ao Projeto -->
-    <section id="introducao">
-        <p>Este projeto tem como objetivo desenvolver um plantaforma de  controle que permitirá monitorar os desempregados e melhorar . A equipe dividiu as responsabilidades da seguinte forma: um membro ficou responsável pela documentação a ser inserida no HTML, enquanto o outro cuidará do diagrama UML até o dia 10/05/2024.</p>
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Documentação do Projeto Plataforma de Gerenciamento de Desempregados
+    </title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles4.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Documentação Plataforma de Gerenciamento de Desempregados</h1>
+    </header>
 
-    <!-- Objetivo do Projeto -->
-    <section id="objetivo">
+    <main class="container">
+      <section id="introducao" class="introducao">
+        <p>
+          Este projeto tem como objetivo desenvolver uma plataforma de controle
+          que permitirá a monitoração dos desempregados e empresas. O trabalho
+          não foi dividido especificamente entre os membros; foi feito de forma
+          simultânea, com cada um contribuindo na parte onde se sentia mais
+          confortável.
+        </p>
+      </section>
+
+      <section id="objetivo" class="topicos">
         <h2>1. Objetivo do Projeto</h2>
-        <p>Desenvolver um Plantaforma de gerenciamento de desempregados para fornecer dados estatísticos e facilitar o controle das informações relacionadas ao desemprego.</p>
-    </section>
+        <p>
+          Desenvolver uma plataforma de gerenciamento de desempregados para
+          fornecer dados estatísticos dos desempregados cadastrados e das
+          empresas, além de facilitar o processo na busca de empregos.
+        </p>
+      </section>
 
-    <!-- Tecnologia Utilizada -->
-    <section id="tecnologia">
+      <section id="tecnologia" class="topicos">
         <h2>2. Tecnologia Utilizada</h2>
-        <p>Utilizaremos Python como linguagem de programação principal devido à sua versatilidade e ampla gama de bibliotecas. Implementaremos operações CRUD (Create, Read, Update, Delete) para gerenciar os dados dos desempregados de forma eficiente.</p>
-    </section>
+        <p>
+          Para o projeto, usaremos as seguintes linguagens de programação
+          (Python, Java e C++) e como linguagem de marcação (HTML).
+        </p>
+      </section>
 
-    <!-- Modelagem de Dados -->
-    <section id="modelagem-dados">
+      <section id="modelagem-dados" class="topicos">
         <h2>3. Modelagem de Dados</h2>
         <p>Cada desempregado terá os seguintes atributos:</p>
         <ul>
-            <li>Nome</li>
-            <li>Idade</li>
-            <li>Cidade</li>
-            <li>Área de Especialização</li>
-            <li>Experiência</li>
-            <li>Habilidades</li>
-            <li>Email</li>
-            <li>Nº Telemovel</li>
+          <li>Nome</li>
+          <li>Cidade</li>
+          <li>Área de formação</li>
+          <li>Tempo de experiência</li>
+          <li>Email</li>
+          <li>Nº Telemóvel</li>
         </ul>
-    </section>
+      </section>
 
-    <!-- Persistência de Dados -->
-    <section id="persistencia-dados">
+      <section id="persistencia-dados" class="topicos">
         <h2>4. Persistência de Dados</h2>
-        <p>Os dados dos desempregados serão armazenados em um banco de dados integrado ao Python.</p>
-    </section>
+        <p>
+          Os dados dos desempregados serão armazenados em um banco de dados
+          integrado ao Python.
+        </p>
+      </section>
 
-    <!-- Testes -->
-    <section id="testes">
+      <section id="testes" class="topicos">
         <h2>5. Testes</h2>
-        <p>Serão desenvolvidos testes para garantir que todas as operações CRUD funcionem conforme o esperado, assegurando que os dados sejam armazenados e recuperados corretamente.</p>
-    </section>
+        <p>
+          Serão desenvolvidos testes para garantir que todas as operações CRUD
+          funcionem conforme o esperado, assegurando que os dados sejam
+          armazenados e recuperados corretamente.
+        </p>
+      </section>
 
-    <!-- Responsáveis pelo Projeto -->
-    <section id="responsaveis">
+      <section id="responsaveis" class="topicos">
         <h2>6. Responsáveis</h2>
         <ul>
+
+          <li>
+            <strong>Membro 1:</strong> Responsável pela documentação e inserção
+            no HTML.
+          </li>
+          <li><strong>Membro 2:</strong> Responsável pelo diagrama UML.</li>
             <li><strong>Membro 1:</strong> Responsável pela documentação e pelo HTML.</li>
             <li><strong>Membro 2:</strong> Responsável pelo diagrama App.py Python e alguns HTML.</li>
-        </ul>
-    </section>
 
-    <!-- Cronograma -->
-    <section id="cronograma">
+        </ul>
+      </section>
+
+      <section id="cronograma" class="topicos">
         <h2>7. Cronograma</h2>
+        <p>
+          O diagrama UML deve ser finalizado até o dia
+          <strong>10/05/2024</strong>, enquanto a documentação será atualizada
+          conforme o andamento do projeto.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2024 Plataforma de Gerenciamento de Desempregados. Todos os
+        direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
+
         <p>O diagrama UML deve ser finalizado até o dia <strong>10/05/2024</strong>, enquanto a documentação será atualizada conforme o andamento do projeto.</p>
     </section>
 </body>
 </html>
+
