@@ -1,9 +1,26 @@
 body {
   font-family: Arial, sans-serif;
+
+  background-image: url("https://img.freepik.com/fotos-gratis/parede-de-concreto_53876-88973.jpg?t=st=1728897913~exp=1728901513~hmac=d604d4d4230755eefc6c92742e341da39dadbf0fb4764cc8491cbf1e1d32fd3f&w=1060");
+  background-size: cover; /* Para cobrir todo o fundo */
+  background-position: center; /* Centralizar a imagem de fundo */
+  background-repeat: no-repeat; /* Não repetir a imagem */
+
   background-color: #f8f1f1;
   text-align: center;
   padding-top: 50px;
 }
+
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
 
 li {
   margin: 10px 0;
@@ -43,12 +60,15 @@ a:hover {
 }
 
 .button-container {
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Colocar os botões em coluna */
+  align-items: center; /* Centralizar horizontalmente */
   margin-top: 20px;
 }
 
 .btn {
   padding: 10px 20px;
-  margin: 10px;
+  margin: 10px 0; /* Margem vertical para espaçamento */
   font-size: 16px;
   cursor: pointer;
   background-color: #007bff; /* Azul padrão */
@@ -56,6 +76,8 @@ a:hover {
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  width: 100%; /* Botões ocupam toda a largura */
+  max-width: 300px; /* Largura máxima para os botões */
 }
 
 .btn:hover {

@@ -47,5 +47,10 @@ def pagina7():
 def pagina8():
     return render_template('python.html')
 
+#pagina 9
+@app.route('/pagina9')
+def pagina9():
+    return render_template('PGD.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
