@@ -10,7 +10,7 @@ def index():
 # Página 1
 @app.route('/pagina1')
 def pagina1():
-    return render_template('Microservices.html')
+    return render_template('Micro services.html')
 
 # Página 2
 @app.route('/pagina2')
