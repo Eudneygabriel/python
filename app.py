@@ -10,7 +10,7 @@ def index():
 # Página 1
 @app.route('/pagina1')
 def pagina1():
-    return render_template('Microservices.html')
+    return render_template('Micro services.html')
 
 # Página 2
 @app.route('/pagina2')
@@ -47,7 +47,10 @@ def pagina7():
 def pagina8():
     return render_template('python.html')
 
-
+#pagina 9
+@app.route('/pagina9')
+def pagina9():
+    return render_template('PGD.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

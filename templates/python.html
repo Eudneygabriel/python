@@ -1,222 +1,148 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentação de Python</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #306998;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #f4f4f4;
-            padding: 10px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #306998;
-            font-weight: bold;
-        }
-        .container {
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            overflow-x: auto;
-        }
-        footer {
-            background-color: #306998;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles4.css') }}"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Documentação de Python</h1>
-        <p>Uma linguagem de programação poderosa e de fácil aprendizado</p>
+      <h1>Documentação de Python</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#introducao">Introdução</a></li>
-            <li><a href="#instalacao">Instalação</a></li>
-            <li><a href="#sintaxe">Sintaxe Básica</a></li>
-            <li><a href="#tipos-dados">Tipos de Dados</a></li>
-            <li><a href="#controle-fluxo">Estruturas de Controle</a></li>
-            <li><a href="#funcoes">Funções</a></li>
-            <li><a href="#modulos">Módulos e Pacotes</a></li>
-            <li><a href="#excecoes">Tratamento de Exceções</a></li>
-            <li><a href="#bibliotecas">Bibliotecas Padrão</a></li>
-            <li><a href="#recursos">Recursos Adicionais</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
+      <section id="introducao">
+        <h2>1. Introdução</h2>
+        <p>
+          Python é uma linguagem de programação interpretada de alto nível,
+          conhecida por sua legibilidade e simplicidade. Ela suporta múltiplos
+          paradigmas de programação, incluindo programação orientada a objetos,
+          imperativa e funcional.
+        </p>
+      </section>
 
-        <section id="introducao">
-            <h2>1. Introdução</h2>
-            <p>Python é uma linguagem de programação interpretada de alto nível, conhecida por sua legibilidade e simplicidade. Ela suporta múltiplos paradigmas de programação, incluindo programação orientada a objetos, imperativa e funcional.</p>
-        </section>
+      <section id="instalacao">
+        <h2>2. Instalação</h2>
+        <h3>2.1. Requisitos do Sistema</h3>
+        <ul>
+          <li>Windows, macOS ou Linux</li>
+          <li>Espaço em disco suficiente</li>
+        </ul>
+        <h3>2.2. Passos de Instalação</h3>
+        <ol>
+          <li>
+            Baixe o instalador do site oficial:
+            <a href="https://www.python.org/downloads/" target="_blank"
+              >python.org</a
+            >
+          </li>
+          <li>Execute o instalador e siga as instruções na tela.</li>
+          <li>
+            Verifique a instalação abrindo o terminal e digitando
+            <code>python --version</code>.
+          </li>
+        </ol>
+      </section>
 
-        <section id="instalacao">
-            <h2>2. Instalação</h2>
-            <h3>2.1. Requisitos do Sistema</h3>
-            <ul>
-                <li>Windows, macOS ou Linux</li>
-                <li>Espaço em disco suficiente</li>
-            </ul>
-            <h3>2.2. Passos de Instalação</h3>
-            <ol>
-                <li>Baixe o instalador do site oficial: <a href="https://www.python.org/downloads/" target="_blank">python.org</a></li>
-                <li>Execute o instalador e siga as instruções na tela.</li>
-                <li>Verifique a instalação abrindo o terminal e digitando <code>python --version</code>.</li>
-            </ol>
-        </section>
-
-        <section id="sintaxe">
-            <h2>3. Sintaxe Básica</h2>
-            <p>Python utiliza indentação para definir blocos de código. Não há necessidade de chaves ou pontos e vírgulas.</p>
-            <pre><code>def saudacao(nome):
+      <section id="sintaxe">
+        <h2>3. Sintaxe Básica</h2>
+        <p>
+          Python utiliza indentação para definir blocos de código. Não há
+          necessidade de chaves ou pontos e vírgulas.
+        </p>
+        <pre><code>def saudacao(nome):
     print(f"Olá, {nome}!")
 
 saudacao("Mundo")
-            </code></pre>
-        </section>
+      </code></pre>
+      </section>
 
-        <section id="tipos-dados">
-            <h2>4. Tipos de Dados</h2>
-            <h3>4.1. Números</h3>
-            <p>Python suporta inteiros, flutuantes e números complexos.</p>
-            <pre><code>a = 10          # Inteiro
+      <section id="tipos-dados">
+        <h2>4. Tipos de Dados</h2>
+        <h3>4.1. Números</h3>
+        <p>Python suporta inteiros, flutuantes e números complexos.</p>
+        <pre><code>a = 10          # Inteiro
 b = 3.14         # Flutuante
 c = 1 + 2j        # Complexo
-            </code></pre>
+      </code></pre>
 
-            <h3>4.2. Strings</h3>
-            <p>Strings são sequências de caracteres.</p>
-            <pre><code>mensagem = "Olá, Python!"
+        <h3>4.2. Strings</h3>
+        <p>Strings são sequências de caracteres.</p>
+        <pre><code>mensagem = "Olá, Python!"
 print(mensagem)
-            </code></pre>
+      </code></pre>
 
-            <h3>4.3. Listas</h3>
-            <p>Listas são coleções ordenadas e mutáveis.</p>
-            <pre><code>frutas = ["maçã", "banana", "cereja"]
+        <h3>4.3. Listas</h3>
+        <p>Listas são coleções ordenadas e mutáveis.</p>
+        <pre><code>frutas = ["maçã", "banana", "cereja"]
 frutas.append("laranja")
 print(frutas)
-            </code></pre>
-        </section>
+      </code></pre>
+      </section>
 
-        <section id="controle-fluxo">
-            <h2>5. Estruturas de Controle</h2>
-            <h3>5.1. Condicionais</h3>
-            <pre><code>idade = 18
+      <section id="controle-fluxo">
+        <h2>5. Estruturas de Controle</h2>
+        <h3>5.1. Condicionais</h3>
+        <pre><code>idade = 18
 if idade >= 18:
     print("Você é maior de idade.")
 else:
     print("Você é menor de idade.")
-            </code></pre>
+      </code></pre>
 
-            <h3>5.2. Laços de Repetição</h3>
-            <pre><code>for i in range(5):
+        <h3>5.2. Laços de Repetição</h3>
+        <pre><code>for i in range(5):
     print(i)
 
 while idade < 21:
     print("Ainda não atingiu 21 anos.")
     idade += 1
-            </code></pre>
-        </section>
+      </code></pre>
+      </section>
 
-        <section id="funcoes">
-            <h2>6. Funções</h2>
-            <p>Funções são blocos de código reutilizáveis.</p>
-            <pre><code>def soma(a, b):
+      <section id="funcoes">
+        <h2>6. Funções</h2>
+        <p>Funções são blocos de código reutilizáveis.</p>
+        <pre><code>def soma(a, b):
     return a + b
 
 resultado = soma(5, 3)
 print(resultado)
-            </code></pre>
-        </section>
+      </code></pre>
+      </section>
 
-        <section id="modulos">
-            <h2>7. Módulos e Pacotes</h2>
-            <p>Módulos são arquivos Python que contêm definições e implementações. Pacotes são diretórios que contêm múltiplos módulos.</p>
-            <pre><code>import math
+      <section id="modulos">
+        <h2>7. Módulos e Pacotes</h2>
+        <p>
+          Módulos são arquivos Python que contêm definições e implementações.
+          Pacotes são diretórios que contêm múltiplos módulos.
+        </p>
+        <pre><code>import math
 
 print(math.sqrt(16))
-            </code></pre>
-        </section>
+      </code></pre>
+      </section>
 
-        <section id="excecoes">
-            <h2>8. Tratamento de Exceções</h2>
-            <p>Exceções são usadas para lidar com erros em tempo de execução.</p>
-            <pre><code>try:
+      <section id="excecoes">
+        <h2>8. Tratamento de Exceções</h2>
+        <p>Exceções são usadas para lidar com erros em tempo de execução.</p>
+        <pre><code>try:
     resultado = 10 / 0
 except ZeroDivisionError:
     print("Erro: Divisão por zero não é permitida.")
 finally:
     print("Execução finalizada.")
-            </code></pre>
-        </section>
+      </code></pre>
+      </section>
 
-        <section id="bibliotecas">
-            <h2>9. Bibliotecas Padrão</h2>
-            <p>Python vem com uma vasta coleção de bibliotecas padrão para diversas funcionalidades.</p>
-            <ul>
-                <li><strong>os</strong>: Interação com o sistema operacional</li>
-                <li><strong>sys</strong>: Manipulação de variáveis e funções do interpretador</li>
-                <li><strong>datetime</strong>: Manipulação de datas e horários</li>
-                <li><strong>json</strong>: Trabalhar com dados JSON</li>
-            </ul>
-        </section>
-
-        <section id="recursos">
-            <h2>10. Recursos Adicionais</h2>
-            <p>Para aprofundar seus conhecimentos em Python, consulte os seguintes recursos:</p>
-            <ul>
-                <li><a href="https://docs.python.org/3/" target="_blank">Documentação Oficial do Python</a></li>
-                <li><a href="https://www.learnpython.org/" target="_blank">Learn Python</a></li>
-                <li><a href="https://realpython.com/" target="_blank">Real Python</a></li>
-                <li><a href="https://stackoverflow.com/questions/tagged/python" target="_blank">Stack Overflow - Python</a></li>
-            </ul>
-        </section>
-
+      <section id="bibliotecas">
+        <h2>9. Bibliotecas Padrão</h2>
+        <p>Python</p>
+      </section>
     </div>
-
-
-
-    <footer>
-        <p>&copy; 2024 Documentação de Python. Todos os direitos reservados.</p>
-    </footer>
-
-</body>
+  </body>
 </html>
->>>>>>> de8e86bc38ac136eb9a12fdaed6ecceabf520564
