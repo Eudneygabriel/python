@@ -5,11 +5,31 @@ body {
   padding-top: 50px;
 }
 
-h1 {
-  color: #333;
-}
 li {
   margin: 10px 0;
+}
+h1, h2, h3 {
+  color: #333;
+}
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+}
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
 }
 
 .container {
