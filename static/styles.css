@@ -1,12 +1,16 @@
 body {
   font-family: Arial, sans-serif;
+
   background-image: url("https://img.freepik.com/fotos-gratis/parede-de-concreto_53876-88973.jpg?t=st=1728897913~exp=1728901513~hmac=d604d4d4230755eefc6c92742e341da39dadbf0fb4764cc8491cbf1e1d32fd3f&w=1060");
   background-size: cover; /* Para cobrir todo o fundo */
   background-position: center; /* Centralizar a imagem de fundo */
   background-repeat: no-repeat; /* Não repetir a imagem */
+
+  background-color: #f8f1f1;
   text-align: center;
   padding-top: 50px;
 }
+
 
 h1,
 h2,
@@ -17,6 +21,38 @@ h3 {
 .container {
   max-width: 600px;
   margin: 0 auto;
+
+li {
+  margin: 10px 0;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
