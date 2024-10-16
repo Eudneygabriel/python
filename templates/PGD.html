@@ -63,7 +63,20 @@
           desemprego e contratações. Através de gráficos e estatísticas, é
           possível identificar tendências e áreas que necessitam de melhorias.
         </p>
+
       </section>
+      
     </main>
+    <section id="diagrama" class="topicos">
+      <h2>5. Diagrama de Funcionamento</h2>
+      <button id="btn-diagrama" class="btn">Exibir Diagrama</button>
+    </section>
+    
+    <script>
+      document.getElementById("btn-diagrama").addEventListener("click", function () {
+        window.open("{{ url_for('static', filename='Diagrama.png') }}", '_blank');
+      });
+    </script>
+
   </body>
 </html>
