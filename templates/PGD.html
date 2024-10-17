@@ -7,9 +7,7 @@
       Documentação do Projeto Plataforma de Gerenciamento de Desempregados
     </title>
     <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles4.css') }}"
-    />
+      rel="stylesheet" href="{{ url_for('static', filename='styles4.css') }}" />
   </head>
   <body>
     <header>
@@ -75,21 +73,68 @@
   document.getElementById("btn-diagrama").addEventListener("click", function () {
     window.open("{{ url_for('static', filename='Diagrama.pdf') }}", '_blank');
   });
-</script>
+</script> 
 
-      </section>
+<div class="container">
 
-   
-    <section id="diagrama" class="topicos">
-      <h2>5. Diagrama de Funcionamento</h2>
-      <button id="btn-diagrama" class="btn">Exibir Diagrama</button>
-    </section>
+        <!-- Container para as imagens -->
+        <div style="display: flex; justify-content: center;">
+          <!-- Primeira Imagem -->
+          <img id="imagem1" src="{{ url_for('static', filename='diagrama.png') }}" 
+               alt="Imagem 1">
+          
+          <!-- Segunda Imagem -->
+          <img id="imagem2" src="{{ url_for('static', filename='diagrama2.png') }}" 
+               alt="Imagem 2">
+      </div>
+
+      <!-- Modal para a Primeira Imagem -->
+      <div id="modal1" class="modal">
+          <div class="modal-content">
+              <img src="{{ url_for('static', filename='diagrama.png') }}" alt="Imagem 1 Grande">
+              <button class="close" onclick="fecharModal('modal1')">Fechar</button>
+          </div>
+      </div>
+
+      <!-- Modal para a Segunda Imagem -->
+      <div id="modal2" class="modal">
+          <div class="modal-content">
+              <img src="{{ url_for('static', filename='diagrama2.png') }}" alt="Imagem 2 Grande">
+              <button class="close" onclick="fecharModal('modal2')">Fechar</button>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      // Função para abrir o modal específico
+      function abrirModal(modalId) {
+          document.getElementById(modalId).style.display = 'flex';
+      }
+
+
+      // Função para fechar o modal específico
+      function fecharModal(modalId) {
+          document.getElementById(modalId).style.display = 'none';
+      }
+
+      // Associar eventos de clique às imagens
+      document.getElementById('imagem1').onclick = function() {
+          abrirModal('modal1');
+      };
+
+      document.getElementById('imagem2').onclick = function() {
+          abrirModal('modal2');
+      };
+
+      // Fechar modal ao clicar fora do conteúdo
+      window.onclick = function(event) {
+          if (event.target.classList.contains('modal')) {
+              event.target.style.display = 'none';
+          }
+      };
+  </script>
+ 
     
-    <script>
-      document.getElementById("btn-diagrama").addEventListener("click", function () {
-        window.open("{{ url_for('static', filename='Diagrama.png') }}", '_blank');
-      });
-    </script>
 
     <section id="persistencia-dados" class="topicos">
       <h2>6. Graficos</h2>
