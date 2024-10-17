@@ -63,42 +63,17 @@
           desemprego e contratações. Através de gráficos e estatísticas, é
           possível identificar tendências e áreas que necessitam de melhorias.
         </p>
-
       </section>
 
-    <section id="diagrama" class="topicos">
-  <h2>5. Diagrama de Funcionamento</h2>
-  <button id="btn-diagrama" class="btn">Exibir Diagrama</button>
-</section>
-
-<script>
-  document.getElementById("btn-diagrama").addEventListener("click", function () {
-    window.open("{{ url_for('static', filename='Diagrama.pdf') }}", '_blank');
-  });
-</script>
-
+      <section id="persistencia-dados" class="topicos">
+        <h2>6. Graficos</h2>
+        <p>
+          A platafoma tambem apresentera graficos que mostraram em tempo real a
+          quantidade de empresas cadastradas e desmpregados cadastrados, que
+          contribuira para a promoçao da platafoma aplindo a sua visiibilidade e
+          aumentandoo seu destaque.
+        </p>
       </section>
-
-   
-    <section id="diagrama" class="topicos">
-      <h2>5. Diagrama de Funcionamento</h2>
-      <button id="btn-diagrama" class="btn">Exibir Diagrama</button>
-    </section>
-    
-    <script>
-      document.getElementById("btn-diagrama").addEventListener("click", function () {
-        window.open("{{ url_for('static', filename='Diagrama.png') }}", '_blank');
-      });
-    </script>
-
-    <section id="persistencia-dados" class="topicos">
-      <h2>6. Graficos</h2>
-      <p>A platafoma tambem apresentera graficos que 
-        mostraram em tempo real a quantidade de empresas cadastradas 
-        e desmpregados cadastrados, que contribuira para a promoçao da 
-        platafoma aplindo a sua visiibilidade e aumentandoo seu destaque.   </p>
-    </section>
-  </main>
-
+    </main>
   </body>
 </html>
