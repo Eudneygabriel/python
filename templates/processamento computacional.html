@@ -1,102 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Documentação de Processamento Computacional</title>
-    <link
-      rel="stylesheet" href="{{ url_for('static', filename='styles9.css') }}"/>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="styles9.css" />
+    <!-- Link para o seu CSS -->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Bem-vindo à Documentação de Processamento Computacional</h1>
+        <p>Clique no botão abaixo para abrir o documentário completo.</p>
+      </header>
 
-<div class="container">
-    <header>
-        <h1>Documentação de Processamento Computacional</h1>
-        <p>Guia completo sobre os principais conceitos e técnicas de processamento computacional</p>
-    </header>
+      <section id="documentario">
+        <button onclick="window.location.href='documentaçao.html'">
+          Abrir Documentário
+        </button>
+      </section>
+    </div>
 
-    <section id="introducao">
-        <h2>1. Introdução</h2>
-        <p>O processamento computacional é um campo amplo que envolve a manipulação de dados e a execução de algoritmos por meio de computadores. Ele abrange desde simples cálculos aritméticos até algoritmos complexos de inteligência artificial.</p>
-    </section>
-
-    <section id="conceitos-basicos">
-        <h2>2. Conceitos Básicos</h2>
-        <h3>2.1 Processador</h3>
-        <p>O processador é a unidade central de processamento (CPU) que realiza as instruções de um programa de computador, realizando operações aritméticas, lógicas e de controle.</p>
-
-        <h3>2.2 Memória</h3>
-        <p>A memória é usada para armazenar dados temporariamente enquanto são processados. A principal memória usada pelo processador é a RAM (Random Access Memory).</p>
-
-        <h3>2.3 Armazenamento</h3>
-        <p>Além da memória RAM, os dados podem ser armazenados de forma persistente em dispositivos como discos rígidos (HDD) e unidades de estado sólido (SSD).</p>
-    </section>
-
-    <section id="algoritmos">
-        <h2>3. Algoritmos</h2>
-        <p>Os algoritmos são conjuntos de instruções que permitem a resolução de problemas computacionais. Eles podem ser classificados em diferentes tipos, dependendo da tarefa que realizam.</p>
-
-        <h3>3.1 Algoritmos de Ordenação</h3>
-        <p>Alguns exemplos de algoritmos de ordenação incluem:</p>
-        <ul>
-            <li>Bubble Sort</li>
-            <li>Quick Sort</li>
-            <li>Merge Sort</li>
-        </ul>
-
-        <h3>3.2 Algoritmos de Busca</h3>
-        <p>Algoritmos de busca são utilizados para localizar elementos em uma estrutura de dados. Exemplos:</p>
-        <ul>
-            <li>Busca Linear</li>
-            <li>Busca Binária</li>
-        </ul>
-
-        <h3>3.3 Exemplo de Algoritmo</h3>
-        <p>A seguir, um exemplo de implementação de um algoritmo de ordenação em Python:</p>
-        <pre><code>def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr</code></pre>
-    </section>
-
-    <section id="estruturas-dados">
-        <h2>4. Estruturas de Dados</h2>
-        <p>As estruturas de dados são formas de organizar e armazenar dados de maneira eficiente. Entre as principais estruturas de dados estão:</p>
-
-        <h3>4.1 Listas</h3>
-        <p>Listas são coleções ordenadas de elementos, onde cada elemento é acessado por um índice. Em Python, as listas são bastante usadas para armazenar sequências de dados.</p>
-
-        <h3>4.2 Pilhas</h3>
-        <p>Pilhas são estruturas de dados onde o último elemento inserido é o primeiro a ser removido (LIFO - Last In, First Out).</p>
-
-        <h3>4.3 Filas</h3>
-        <p>Filas são estruturas de dados onde o primeiro elemento inserido é o primeiro a ser removido (FIFO - First In, First Out).</p>
-    </section>
-
-    <section id="otimizacao">
-        <h2>5. Otimização</h2>
-        <p>A otimização de algoritmos e processos computacionais é uma área crucial, focada em melhorar o desempenho e reduzir o consumo de recursos computacionais. Técnicas comuns incluem:</p>
-
-        <h3>5.1 Paralelização</h3>
-        <p>A paralelização divide uma tarefa em várias subtarefas que podem ser executadas simultaneamente, aproveitando múltiplos núcleos de processamento.</p>
-
-        <h3>5.2 Memória Cache</h3>
-        <p>A memória cache é usada para armazenar dados temporários, permitindo acesso rápido a informações que o processador usa com frequência.</p>
-    </section>
-
-    <section id="conclusao">
-        <h2>6. Conclusão</h2>
-        <p>O processamento computacional abrange diversas áreas e conceitos, desde a execução básica de algoritmos até técnicas mais avançadas de otimização. O entendimento dos componentes e suas interações é essencial para o desenvolvimento de sistemas eficientes.</p>
-    </section>
-</div>
-
-<footer>
-    <p>Documentação de Processamento Computacional &copy; 2024</p>
-</footer>
-
-</body>
+    <footer>
+      <p>Plataforma de Documentação &copy; 2024</p>
+    </footer>
+  </body>
 </html>
