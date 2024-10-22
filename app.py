@@ -52,5 +52,16 @@ def pagina8():
 def pagina9():
     return render_template('PGD.html')
 
+#pagina 10
+@app.route('/pagina10')
+def pagina10():
+    return render_template('Documentaçao.html')
+
+#pagina 10
+@app.route('/pagina11')
+def pagina11():
+    return render_template('Organização de um Computador.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

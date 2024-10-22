@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Página Inicial</title>
-    <link rel="stylesheet" href="styles9.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles11.css') }}"
+    />
     <!-- Link para o seu CSS -->
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1>Bem-vindo à Documentação de Processamento Computacional</h1>
-        <p>Clique no botão abaixo para abrir o documentário completo.</p>
-      </header>
-
-      <section id="documentario">
-        <button onclick="window.location.href='documentaçao.html'">
-          Abrir Documentário
+      <h1>Processamento Computacional</h1>
+      <div class="button-container">
+        <button class="btn" onclick="window.location.href='/pagina10'">
+          Documentação
         </button>
-      </section>
+        <button class="btn" onclick="window.location.href='/pagina11'">
+          Organização de um Computador
+        </button>
+      </div>
     </div>
-
-    <footer>
-      <p>Plataforma de Documentação &copy; 2024</p>
-    </footer>
   </body>
 </html>
