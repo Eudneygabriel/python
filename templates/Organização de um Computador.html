@@ -5,87 +5,183 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Organização de um Computador</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles12.css') }}"
+    />
   </head>
   <body>
-    <h1>COMPUTADOR</h1>
-    <p>
-      Um computador é uma máquina eletrônica que processa dados de forma
-      estruturada, seguindo uma sequência lógica de operações.
-    </p>
-    <p>
-      O conmputador e composto por componentes que recebem entradas, processam
-      essas informações e geram saídas úteis; que são
-    </p>
-    <ul>
-      <li>Entrada (Input):</li>
-      <li>Processamento</li>
-      <li>Armazenamento</li>
-      <li>Saída (Output)</li>
-    </ul>
-    <p>
-      <strong>Entrada (input)</strong> refere-se aos dados ou comandos que um
-      computador recebe de fontes externas para serem processados.
-    </p>
-    <p>
-      . Esses dados podem ser inseridos de várias formas, geralmente por meio de
-      dispositivos de entrada. Exemplos de dispositivos de entrada incluem
-    </p>
-    <ul>
-      <li>
-        <strong>Teclado: </strong>Para digitação de texto, números e comandos.
-      </li>
-      <li>
-        <strong>Mouse: </strong>Para selecionar, arrastar e clicar em ícones ou
-        botões na interface gráfica.
-      </li>
-      <li>
-        <strong>Microfone: </strong> Para capturar som ou comandos de voz.
-      </li>
-      <li>
-        <strong>Scanner: </strong>Para converter documentos físicos em imagens
-        digitais.
-      </li>
-      <li>
-        <strong>Sensores: </strong>Usados em dispositivos especializados (como
-        smartphones) para captar informações como temperatura, movimento ou luz.
-      </li>
-    </ul>
-    <p>
-      <strong>Processamento </strong>Refere-se à etapa em que o computador
-      manipula, transforma ou interpreta os dados recebidos na fase de entrada.
-    </p>
-    <p>principais aspectos do processamento:</p>
-    <ul>
-      <li>Execução de Instruções:</li>
-      <li>Unidade de Controle</li>
-      <li>Unidade Aritmética e Lógica (ALU)</li>
-      <li>Memória de Curto Prazo (RAM)</li>
-    </ul>
-    <p>
-      <strong>Armazenamento </strong>refere-se à função de um computador de
-      salvar e reter dados, programas e informações para uso futuro, seja
-      temporariamente ou permanentemente.
-    </p>
-    <p>Existem dois tipos principais de armazenamento:</p>
-    <ul>
-      <li>armazenamento temporário (volátil)</li>
-      <li>armazenamento permanente (não volátil)</li>
-    </ul>
-    <p>
-      <strong>Saída (Output) </strong> refere-se aos resultados ou informações
-      processadas que o computador envia para fora, tornando-os acessíveis ao
-      usuário ou a outros dispositivos
-    </p>
-    <p>
-      Os dados são processados e o computrador os apresenta atraves dos
-      dispositivos de saida:
-    </p>
-    <ul>
-      <li>Monitor</li>
-      <li>Impressora</li>
-      <li>Caixas de Som</li>
-      <li>Projetor:</li>
-    </ul>
+    <div class="container">
+      <header>
+        <h1>COMPUTADOR</h1>
+      </header>
+      <p>
+        Um computador é uma máquina eletrônica que processa dados de forma
+        estruturada, seguindo uma sequência lógica de operações.
+      </p>
+      <p>
+        O computador é composto por componentes que recebem entradas, processam
+        essas informações e geram saídas úteis; que são:
+      </p>
+      <ul>
+        <li>Entrada (Input)</li>
+        <li>Processamento</li>
+        <li>Armazenamento</li>
+        <li>Saída (Output)</li>
+      </ul>
+      <p>
+        <strong>Entrada (input)</strong> refere-se aos dados ou comandos que um
+        computador recebe de fontes externas para serem processados.
+      </p>
+      <p>
+        Esses dados podem ser inseridos de várias formas, geralmente por meio de
+        dispositivos de entrada. Exemplos de dispositivos de entrada incluem:
+      </p>
+      <ul>
+        <li>
+          <strong>Teclado:</strong> Para digitação de texto, números e comandos.
+        </li>
+        <li>
+          <strong>Mouse:</strong> Para selecionar, arrastar e clicar em ícones
+          ou botões na interface gráfica.
+        </li>
+        <li>
+          <strong>Microfone:</strong> Para capturar som ou comandos de voz.
+        </li>
+        <li>
+          <strong>Scanner:</strong> Para converter documentos físicos em imagens
+          digitais.
+        </li>
+        <li>
+          <strong>Sensores:</strong> Usados em dispositivos especializados (como
+          smartphones) para captar informações como temperatura, movimento ou
+          luz.
+        </li>
+      </ul>
+      <p>
+        <strong>Processamento</strong> refere-se à etapa em que o computador
+        manipula, transforma ou interpreta os dados recebidos na fase de
+        entrada.
+      </p>
+      <p>Os principais aspectos do processamento incluem:</p>
+      <ul>
+        <li>Execução de Instruções</li>
+        <li>Unidade de Controle</li>
+        <li>Unidade Aritmética e Lógica (ALU)</li>
+        <li>Memória de Curto Prazo (RAM)</li>
+      </ul>
+      <p>
+        <strong>Armazenamento</strong> refere-se à função de um computador de
+        salvar e reter dados, programas e informações para uso futuro, seja
+        temporariamente ou permanentemente.
+      </p>
+      <p>Existem dois tipos principais de armazenamento:</p>
+      <ul>
+        <li>Armazenamento temporário (volátil)</li>
+        <li>Armazenamento permanente (não volátil)</li>
+      </ul>
+      <p>
+        <strong>Saída (Output)</strong> refere-se aos resultados ou informações
+        processadas que o computador envia para fora, tornando-os acessíveis ao
+        usuário ou a outros dispositivos.
+      </p>
+      <p>
+        Os dados processados pelo computador podem ser apresentados através dos
+        dispositivos de saída, como:
+      </p>
+      <ul>
+        <li>Monitor</li>
+        <li>Impressora</li>
+        <li>Caixas de Som</li>
+        <li>Projetor</li>
+      </ul>
+
+      <h2>Etapas do Processamento de uma Tarefa</h2>
+
+      <h3>1. Entrada (Input) do Usuário:</h3>
+      <p>
+        <strong>Ação do Usuário:</strong> O usuário clica no ícone do navegador
+        web usando o mouse (dispositivo de entrada).
+      </p>
+      <p>
+        <strong>Sinal para o Sistema Operacional:</strong> Esse clique gera um
+        sinal que é enviado ao sistema operacional (SO), indicando que o usuário
+        quer abrir o navegador.
+      </p>
+
+      <h3>2. Reconhecimento da Ação pelo Sistema Operacional:</h3>
+      <p>
+        <strong>Recepção do Comando:</strong> O sistema operacional recebe o
+        comando de clique e verifica qual programa está associado a esse ícone,
+        no caso, o navegador web.
+      </p>
+      <p>
+        <strong>Busca pelo Programa no Armazenamento:</strong> O SO localiza o
+        arquivo executável do navegador no dispositivo de armazenamento
+        (geralmente no SSD ou HD).
+      </p>
+
+      <h3>3. Carregamento do Programa para a Memória RAM:</h3>
+      <p>
+        <strong>Transferência para a Memória:</strong> O sistema operacional
+        carrega o navegador da unidade de armazenamento para a memória RAM
+        (memória de curto prazo). Isso ocorre porque a RAM permite um acesso
+        mais rápido à CPU.
+      </p>
+      <p>
+        <strong>Alocação de Recursos:</strong> O SO também aloca os recursos
+        necessários para o navegador, como espaço na memória e permissões de uso
+        da CPU.
+      </p>
+
+      <h3>4. Execução do Programa pela CPU (Processamento):</h3>
+      <p>
+        <strong>Início do Processamento:</strong> Com o navegador na RAM, a CPU
+        começa a executar as instruções do programa. A CPU segue instruções como
+        abrir a interface do navegador, carregar componentes como o motor de
+        renderização da página, e preparar o ambiente de navegação.
+      </p>
+      <p>
+        <strong>Interações Constantes:</strong> A CPU continua interagindo com a
+        memória RAM, recuperando e processando instruções e dados necessários
+        para que o programa funcione.
+      </p>
+
+      <h3>5. Renderização da Interface (Saída):</h3>
+      <p>
+        <strong>Saída para o Monitor:</strong> O navegador carrega e a interface
+        gráfica do programa é exibida no monitor (dispositivo de saída),
+        mostrando a tela inicial ou página em branco do navegador.
+      </p>
+      <p>
+        Agora, o usuário pode começar a interagir com o navegador, inserindo
+        URLs, clicando em botões, etc., gerando novas entradas.
+      </p>
+
+      <h3>6. Gerenciamento Contínuo pelo Sistema Operacional:</h3>
+      <p>
+        <strong>Gerenciamento de Processos:</strong> O SO gerencia o navegador
+        enquanto ele está aberto, alocando recursos da CPU e memória conforme o
+        usuário abre novas abas ou carrega páginas.
+      </p>
+      <p>
+        <strong>Memória Virtual (se necessário):</strong> Se a RAM começar a
+        ficar cheia, o sistema pode mover parte dos dados do navegador para o
+        armazenamento secundário (HD ou SSD) usando memória virtual, garantindo
+        que o computador continue a funcionar sem travar.
+      </p>
+
+      <h3>7. Saída Contínua (Output Dinâmico):</h3>
+      <p>
+        <strong>Exibição de Páginas Web:</strong> O navegador recebe dados da
+        internet, processa as informações e as exibe na tela como páginas web.
+        Essas páginas, que são renderizadas pelo motor do navegador, são uma
+        forma contínua de saída durante o uso.
+      </p>
+
+      <footer>
+        <p>Organização de um Computador &copy; 2024</p>
+      </footer>
+    </div>
   </body>
 </html>
