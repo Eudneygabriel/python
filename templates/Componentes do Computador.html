@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componentes do Computador</title>
+    <!-- Link para o CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles13.css') }}"
+    />
+  </head>
+  <body>
+    <h1>COMPONENTES DO COMPUTADOR</h1>
+    <div class="container">
+      <div class="text">
+        <p>
+          O computador é composto por diversos componentes e a maioria está
+          situada na placa-mãe (Motherboard).
+        </p>
+      </div>
+      <div id="modal" class="modal" onclick="fecharModal()">
+        <img id="modal-img" src="{{ url_for('static', filename='img1.jpeg') }}" alt="Imagem Ampliada">
+      </div>
+      
+      <img
+        src="{{ url_for('static', filename='img1.jpeg') }}"
+        alt="Descrição da Imagem"
+        class="image"
+        id="imagem"
+        width="250"
+        style="cursor: pointer;"
+      />
+      
+      
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  </body>
+</html>
