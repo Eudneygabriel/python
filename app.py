@@ -62,10 +62,12 @@ def pagina10():
 def pagina11():
     return render_template('Organização de um Computador.html')
 
+
 #pagina 12
 @app.route('/pagina12')
 def pagina12():
     return render_template('Componentes do Computador.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
