@@ -5,6 +5,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  position: relative; /* Permite que os elementos posicionados fiquem relativos a este container */
 }
 
 h1 {
@@ -21,20 +22,27 @@ h1 {
   margin: 20px auto;
   background-color: #ffffff;
   padding: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: flex-start; /* Alinha o texto e a imagem no topo */
+  position: relative;
 }
 
 .image {
-  margin-left: 20px;
+  position: absolute; /* Permite que a imagem flutue sobre o texto */
+  top: 50%; /* Ajusta a posição vertical ao centro */
+  right: 20px; /* Ajusta a posição horizontal à direita */
+  transform: translateY(
+    -50%
+  ); /* Centraliza verticalmente em relação ao seu próprio tamanho */
+  width: 250px; /* Tamanho da imagem */
+  z-index: 1; /* Coloca a imagem acima do texto */
 }
 
 .text {
-  max-width: 600px; /* Largura máxima do texto */
+  max-width: 600px;
+  padding-right: 500px; /* Ajuste o padding se necessário */
+  position: relative; /* Garante que o texto não sobreponha a imagem */
+  z-index: 0; /* Coloca o texto abaixo da imagem */
 }
 
 ul {
@@ -66,7 +74,6 @@ footer {
   margin-top: 20px;
 }
 
-/* Estilos para a sobreposição (modal) */
 .modal {
   display: none; /* Oculta por padrão */
   position: fixed;
@@ -74,18 +81,32 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   z-index: 10; /* Para ficar acima do restante */
 }
 
-.modal img {
-  max-width: 90%;
-  max-height: 90%;
+.modal-content {
+  background-color: white;
+  padding: 20px;
   border-radius: 8px;
+  text-align: left;
+  position: relative;
+  z-index: 11; /* Para ficar acima do fundo do modal */
 }
 
 .modal.show {
   display: flex; /* Mostra o modal */
+}
+
+.image-slot-ide {
+  position: absolute; /* Permite que a imagem flutue sobre o texto */
+  top: 50%; /* Ajusta a posição vertical ao centro */
+  right: 20px; /* Ajusta a posição horizontal à direita */
+  transform: translateY(
+    -50%
+  ); /* Centraliza verticalmente em relação ao seu próprio tamanho */
+  width: 150px; /* Tamanho da imagem do Slot IDE */
+  z-index: 1; /* Coloca a imagem acima do texto */
 }

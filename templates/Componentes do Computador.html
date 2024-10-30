@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Componentes do Computador</title>
-    <!-- Link para o CSS -->
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='styles13.css') }}"
@@ -18,23 +17,72 @@
           O computador é composto por diversos componentes e a maioria está
           situada na placa-mãe (Motherboard).
         </p>
+        <ul>
+          <li>
+            <button class="btn" onclick="abrirMiniPagina()">Slot IDE</button>
+          </li>
+        </ul>
       </div>
-      <div id="modal" class="modal" onclick="fecharModal()">
-        <img id="modal-img" src="{{ url_for('static', filename='img1.jpeg') }}" alt="Imagem Ampliada">
-      </div>
-      
+
+      <!-- Imagem principal -->
       <img
-        src="{{ url_for('static', filename='img1.jpeg') }}"
-        alt="Descrição da Imagem"
+        src="{{ url_for('static', filename='imagem.png') }}"
+        alt="Motherboard"
         class="image"
         id="imagem"
-        width="250"
-        style="cursor: pointer;"
+        width="300"
+        style="cursor: pointer"
       />
-      
-      
-    
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
+      <!-- Modal para a imagem da Motherboard -->
+      <div id="modal" class="modal" onclick="fecharModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <img src="{{ url_for('static', filename='imagem.png') }}"
+          alt="Motherboard" width="1000" /* Aumente o tamanho da imagem conforme
+          necessário */ style="max-width: 90%; height: auto;" /* Ajuste a
+          largura máxima para 90% da tela */ />
+          <button onclick="fecharModal()">Fechar</button>
+        </div>
+      </div>
+
+      <!-- Modal para Slot IDE -->
+      <div id="modal-slot-ide" class="modal" onclick="fecharModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <h2>Slot IDE</h2>
+          <p>
+            O slot IDE (Integrated Drive Electronics) é um conector usado para
+            conectar dispositivos de armazenamento, como discos rígidos (HDD) e
+            unidades de CD/DVD, à placa-mãe de um computador.
+          </p>
+          <h3>Função do Slot IDE</h3>
+          <ul>
+            <li>
+              <strong>Comunicação com o Disco:</strong> Permite a comunicação
+              entre a placa-mãe e o dispositivo de armazenamento, transmitindo
+              dados e alimentando a unidade.
+            </li>
+            <li>
+              <strong>Velocidade de Transferência:</strong> Embora mais lento
+              que o SATA, o IDE suportava transferências de dados suficientes
+              para os discos rígidos da época.
+            </li>
+            <li>
+              <strong>Conexão de Múltiplos Dispositivos:</strong> Geralmente, o
+              cabo IDE podia conectar até dois dispositivos no mesmo canal,
+              configurando um como "Master" e outro como "Slave".
+            </li>
+          </ul>
+          <img
+            src="{{ url_for('static', filename='imagen1.jpg') }}"
+            alt="Slot IDE"
+            class="image"
+            id="imagem-slot-ide"
+            width="250"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='Componentes do Computador.js') }}"></script>
   </body>
 </html>
