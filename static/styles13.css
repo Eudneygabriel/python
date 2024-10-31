@@ -100,13 +100,18 @@ footer {
   display: flex; /* Mostra o modal */
 }
 
-.image-slot-ide {
-  position: absolute; /* Permite que a imagem flutue sobre o texto */
-  top: 50%; /* Ajusta a posição vertical ao centro */
-  right: 20px; /* Ajusta a posição horizontal à direita */
-  transform: translateY(
-    -50%
-  ); /* Centraliza verticalmente em relação ao seu próprio tamanho */
-  width: 150px; /* Tamanho da imagem do Slot IDE */
-  z-index: 1; /* Coloca a imagem acima do texto */
+/* Estilos para o conteúdo dentro do modal do Slot IDE */
+#modal-slot-ide .image-slot-ide {
+  float: right; /* Posiciona a imagem à direita do texto */
+  margin-left: 20px; /* Espaçamento entre a imagem e o texto */
+  width: 300px; /* Tamanho aumentado da imagem */
+  margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+#modal-slot-ide .text-slot-ide {
+  overflow: auto; /* Garante que o texto flua corretamente ao redor da imagem */
+}
+
+#modal-slot-ide .clear {
+  clear: both; /* Faz o texto abaixo da imagem começar em uma nova linha */
 }
