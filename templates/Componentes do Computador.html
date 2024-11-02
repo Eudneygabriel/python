@@ -11,20 +11,31 @@
   </head>
   <body>
     <h1>COMPONENTES DO COMPUTADOR</h1>
+
     <div class="container">
       <div class="text">
         <p>
           O computador é composto por diversos componentes e a maioria está
           situada na placa-mãe (Motherboard).
         </p>
+
         <ul>
           <li>
-            <button class="btn" onclick="abrirMiniPagina()">Slot IDE</button>
+            <button class="btn" onclick="abrirModal('modal-slot-ide')">
+              Slot IDE
+            </button>
+          </li>
+          <li>
+            <button
+              class="btn"
+              onclick="abrirModal('modal-conector-fonte-24pinos')"
+            >
+              Conector Fonte 24 pinos
+            </button>
           </li>
         </ul>
       </div>
 
-      <!-- Imagem principal -->
       <img
         src="{{ url_for('static', filename='imagem.png') }}"
         alt="Motherboard"
@@ -34,56 +45,74 @@
         style="cursor: pointer"
       />
 
-      <!-- Modal para a imagem da Motherboard -->
+      <!-- Modal da imagem principal -->
       <div id="modal" class="modal" onclick="fecharModal()">
         <div class="modal-content" onclick="event.stopPropagation();">
-          <img src="{{ url_for('static', filename='imagem.png') }}"
-          alt="Motherboard" width="1000" /* Aumente o tamanho da imagem conforme
-          necessário */ style="max-width: 90%; height: auto;" /* Ajuste a
-          largura máxima para 90% da tela */ />
+          <img
+            src="{{ url_for('static', filename='imagem.png') }}"
+            alt="Motherboard"
+            width="1000"
+            style="max-width: 90%; height: auto"
+          />
           <button onclick="fecharModal()">Fechar</button>
         </div>
       </div>
 
-     <!-- Modal para Slot IDE -->
-<div id="modal-slot-ide" class="modal" onclick="fecharModal()">
-  <div class="modal-content" onclick="event.stopPropagation();">
-    <h2>Slot IDE</h2>
-    <div class="text-slot-ide">
-      <p>
-        O slot IDE (Integrated Drive Electronics) é um conector usado para conectar
-        dispositivos de armazenamento, como discos rígidos (HDD) e unidades de
-        CD/DVD, à placa-mãe de um computador.
-      </p>
-      <img
-        src="{{ url_for('static', filename='imagen1.jpg') }}"
-        alt="Slot IDE"
-        class="image-slot-ide"
-        id="imagem-slot-ide"
-      />
-      <h3>Função do Slot IDE</h3>
-      <ul>
-        <li>
-          <strong>Comunicação com o Disco:</strong> Permite a comunicação entre a
-          placa-mãe e o dispositivo de armazenamento, transmitindo dados e alimentando
-          a unidade.
-        </li>
-        <li>
-          <strong>Velocidade de Transferência:</strong> Embora mais lento que o SATA,
-          o IDE suportava transferências de dados suficientes para os discos rígidos da
-          época.
-        </li>
-        <li>
-          <strong>Conexão de Múltiplos Dispositivos:</strong> Geralmente, o cabo IDE
-          podia conectar até dois dispositivos no mesmo canal, configurando um como
-          "Master" e outro como "Slave".
-        </li>
-      </ul>
-      <div class="clear"></div> <!-- Garante que o texto abaixo fique fora da área da imagem -->
-    </div>
-  </div>
-</div>
+      <!-- Modal para Slot IDE -->
+      <div id="modal-slot-ide" class="modal" onclick="fecharModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <h2>Slot IDE</h2>
+          <div class="text-slot-ide">
+            <p>
+              O slot IDE (Integrated Drive Electronics) é um conector usado para
+              conectar dispositivos de armazenamento...
+            </p>
+            <img
+              src="{{ url_for('static', filename='imagen1.jpg') }}"
+              alt="Slot IDE"
+              class="image-slot-ide"
+            />
+            <h3>Função do Slot IDE</h3>
+            <ul>
+              <li>
+                <strong>Comunicação com o Disco:</strong> Permite a comunicação
+                entre a placa-mãe e o dispositivo...
+              </li>
+              <!-- Outros itens -->
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Modal para Conector Fonte 24 pinos -->
+      <div
+        id="modal-conector-fonte-24pinos"
+        class="modal"
+        onclick="fecharModal()"
+      >
+        <div class="modal-content" onclick="event.stopPropagation();">
+          <h2>Conector Fonte 24 pinos</h2>
+          <div class="text-conector-fonte-24pinos">
+            <p>
+              O conector de fonte de 24 pinos é um dos conectores principais
+              para alimentar a placa-mãe de um computador.
+            </p>
+            <img
+              src="{{ url_for('static', filename='imagem3.jpg') }}"
+              alt="Conector Fonte 24 pinos"
+              class="image-conector-fonte-24pinos"
+            />
+            <h3>Função do Conector Fonte 24 pinos</h3>
+            <p>
+              O conector de 24 pinos distribui energia para diversos componentes
+              da placa-mãe...
+            </p>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="{{ url_for('static', filename='Componentes do Computador.js') }}"></script>
   </body>

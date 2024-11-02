@@ -5,12 +5,10 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  position: relative; /* Permite que os elementos posicionados fiquem relativos a este container */
 }
 
 h1 {
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   background-color: #007bff;
   padding: 15px;
   text-align: center;
@@ -24,58 +22,18 @@ h1 {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  position: relative;
 }
 
 .image {
-  position: absolute; /* Permite que a imagem flutue sobre o texto */
-  top: 50%; /* Ajusta a posição vertical ao centro */
-  right: 20px; /* Ajusta a posição horizontal à direita */
-  transform: translateY(
-    -50%
-  ); /* Centraliza verticalmente em relação ao seu próprio tamanho */
-  width: 250px; /* Tamanho da imagem */
-  z-index: 1; /* Coloca a imagem acima do texto */
-}
-
-.text {
-  max-width: 600px;
-  padding-right: 500px; /* Ajuste o padding se necessário */
-  position: relative; /* Garante que o texto não sobreponha a imagem */
-  z-index: 0; /* Coloca o texto abaixo da imagem */
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background-color: #e9ecef;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-li:hover {
-  background-color: #d3d9df;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #f1f1f1;
-  border-radius: 0 0 10px 10px;
-  margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 250px;
 }
 
 .modal {
-  display: none; /* Oculta por padrão */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -84,7 +42,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  z-index: 10; /* Para ficar acima do restante */
 }
 
 .modal-content {
@@ -92,26 +49,16 @@ footer {
   padding: 20px;
   border-radius: 8px;
   text-align: left;
-  position: relative;
-  z-index: 11; /* Para ficar acima do fundo do modal */
 }
 
-.modal.show {
-  display: flex; /* Mostra o modal */
+#modal-slot-ide .image-slot-ide,
+#modal-conector-fonte-24pinos .image-conector-fonte-24pinos {
+  float: right;
+  margin-left: 20px;
+  width: 300px;
+  margin-bottom: 20px;
 }
 
-/* Estilos para o conteúdo dentro do modal do Slot IDE */
-#modal-slot-ide .image-slot-ide {
-  float: right; /* Posiciona a imagem à direita do texto */
-  margin-left: 20px; /* Espaçamento entre a imagem e o texto */
-  width: 300px; /* Tamanho aumentado da imagem */
-  margin-bottom: 20px; /* Espaço abaixo da imagem */
-}
-
-#modal-slot-ide .text-slot-ide {
-  overflow: auto; /* Garante que o texto flua corretamente ao redor da imagem */
-}
-
-#modal-slot-ide .clear {
-  clear: both; /* Faz o texto abaixo da imagem começar em uma nova linha */
+.clear {
+  clear: both;
 }
