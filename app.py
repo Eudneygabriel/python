@@ -68,6 +68,16 @@ def pagina11():
 def pagina12():
     return render_template('Componentes do Computador.html')
 
+#pagina 13
+@app.route('/pagina13')
+def pagina13():
+    return render_template('slot-IDE.html')
+
+#pagina 14
+@app.route('/pagina14')
+def pagina14():
+    return render_template('Conector Fonte 24 pinos.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
