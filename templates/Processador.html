@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura do Processador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles15.css') }}">
+</head>
+<body>
+
+    <h1>Estrutura de um Processador de Computador</h1>
+    <p>A estrutura de um processador de computador é composta por diversos componentes interligados que permitem a execução de instruções e processamento de dados. Os principais elementos da estrutura de um processador incluem:</p>
+
+    <ul>
+        <li><strong>Unidade de Controle (UC):</strong> Responsável por gerenciar e coordenar todas as operações do processador.</li>
+        <li><strong>Unidade Lógica e Aritmética (ULA):</strong> Realiza operações matemáticas e lógicas.</li>
+        <li><strong>Registradores:</strong> Pequenas áreas de armazenamento rápido usadas para guardar dados temporários e instruções em execução.</li>
+        <li><strong>Cache:</strong> Memória interna de alta velocidade usada para armazenar dados e instruções frequentemente acessadas.</li>
+        <li><strong>Clock (Relógio):</strong> Define a velocidade com que o processador executa as instruções.</li>
+        <li><strong>Barramento de Dados e Barramento de Endereços:</strong> Canais que permitem a comunicação entre o processador e outros componentes.</li>
+        <li><strong>Decodificador de Instruções:</strong> Interpreta e traduz as instruções recebidas para comandos que a UC e a ULA possam executar.</li>
+    </ul>
+
+    <h2>Funcionamento Interno de um Processador: Exemplo de Soma de Dois Números</h2>
+    <p>Vamos descrever como a Unidade de Controle (UC) e a Unidade Lógica e Aritmética (ULA) trabalham juntas para realizar a soma de dois números, como 3 e 5.</p>
+
+    <div class="exemplo">
+        <h3>Passo a Passo da Soma</h3>
+        <ol>
+            <li><strong>Carregar a Instrução e os Dados:</strong>
+                <ul>
+                    <li>A UC lê a instrução de “ADD” da memória e recupera os números (3 e 5), carregando-os nos registradores internos.</li>
+                </ul>
+            </li>
+            <li><strong>Decodificação da Instrução:</strong>
+                <ul>
+                    <li>A UC decodifica a instrução “ADD” e informa a ULA que a operação a ser executada é uma soma.</li>
+                </ul>
+            </li>
+            <li><strong>Execução da Operação na ULA:</strong>
+                <ul>
+                    <li>A ULA soma os valores 3 e 5, resultando em 8.</li>
+                </ul>
+            </li>
+            <li><strong>Armazenamento do Resultado:</strong>
+                <ul>
+                    <li>O resultado 8 é armazenado em um registrador ou enviado à memória, conforme exigido.</li>
+                </ul>
+            </li>
+            <li><strong>Incremento do Contador de Programa:</strong>
+                <ul>
+                    <li>A UC incrementa o contador de programa para apontar para a próxima instrução a ser executada.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <h2>Resumo do Fluxo de Operação</h2>
+    <ol>
+        <li>Buscar Instrução: A UC busca a instrução de soma e os dados da memória.</li>
+        <li>Decodificar Instrução: A UC interpreta a instrução “ADD” e ativa a ULA para somar os valores.</li>
+        <li>Executar Operação: A ULA realiza a soma 3 + 5 = 8.</li>
+        <li>Armazenar Resultado: O resultado é armazenado em um registrador ou na memória.</li>
+        <li>Preparar Próxima Instrução: O contador de programa é atualizado para continuar a execução.</li>
+    </ol>
+
+    <p>Nesse exemplo simples, a Unidade de Controle e a ULA trabalham em sincronia, garantindo que os dados certos sejam processados corretamente.</p>
+    
+</body>
+</html>
