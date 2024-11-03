@@ -1,0 +1,75 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #fff;
+  background-color: #007bff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 90%;
+  text-align: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.image-container {
+  position: absolute; /* Posiciona a imagem de forma absoluta em relação ao contêiner pai */
+  right: 20px; /* Define a posição da imagem a 20px da borda direita do contêiner */
+  top: 20px; /* Define a posição da imagem a 20px do topo do contêiner */
+  width: 300px; /* Define a largura da imagem */
+}
