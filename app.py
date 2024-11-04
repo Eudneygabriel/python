@@ -73,6 +73,11 @@ def pagina12():
 def pagina13():
     return render_template('Processador.html')
 
+#pagina 14
+@app.route('/pagina14')
+def pagina14():
+    return render_template('Unidade de memória.html')
+
 
 
 if __name__ == '__main__':
