@@ -1,4 +1,3 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f4f8;
@@ -51,25 +50,22 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center; /* Centraliza o modal horizontalmente */
+  align-items: center; /* Centraliza o modal verticalmente */
 }
 
 .modal-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  max-width: 90%;
-  text-align: right;
+  max-width: 500px; /* Define a largura máxima do modal */
+  width: 90%; /* Para ocupar até 90% da largura da tela */
+  text-align: center; /* Centraliza o conteúdo dentro do modal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.clear {
-  clear: both;
-}
-
-.image-container {
-  position: absolute; /* Posiciona a imagem de forma absoluta em relação ao contêiner pai */
-  right: 20px; /* Define a posição da imagem a 20px da borda direita do contêiner */
-  top: 20px; /* Define a posição da imagem a 20px do topo do contêiner */
-  width: 300px; /* Define a largura da imagem */
+.image-container img {
+  width: 100%; /* Ocupa 100% da largura disponível */
+  max-width: 800px; /* Aumenta o limite máximo de largura para 800px */
+  height: auto; /* Mantém a proporção da imagem */
 }
