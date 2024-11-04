@@ -75,3 +75,33 @@ h1 {
   max-width: 400px; /* Limite de tamanho */
   height: auto; /* Mantém a proporção da imagem */
 }
+
+/* Adicionando estilo aos botões */
+.btn {
+  background-color: #007bff; /* Azul */
+  color: white; /* Cor do texto */
+  border: none; /* Remove bordas */
+  padding: 10px 15px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  text-decoration: none; /* Remove sublinhado */
+  display: inline-block; /* Faz o botão se comportar como um bloco */
+  font-size: 16px; /* Tamanho da fonte */
+  margin: 4px 2px; /* Espaçamento entre os botões */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor como mão ao passar sobre o botão */
+  transition: background-color 0.3s; /* Efeito de transição ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.btn:hover {
+  background-color: #0056b3; /* Azul mais escuro */
+}
+
+/* Adicionando estilo aos cabeçalhos do modal */
+.modal-content h2 {
+  color: #007bff; /* Cabeçalhos em azul */
+}
+
+.modal-content h3 {
+  color: #007bff; /* Subcabeçalhos em azul */
+}

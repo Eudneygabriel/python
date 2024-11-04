@@ -1,87 +1,104 @@
+/* Fundo de vídeo */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+  object-fit: cover;
+  filter: brightness(50%); /* Ajuste opcional de brilho para melhor contraste */
+}
+
 body {
   font-family: Arial, sans-serif;
-
-  background-image: url("https://img.freepik.com/fotos-gratis/parede-de-concreto_53876-88973.jpg?t=st=1728897913~exp=1728901513~hmac=d604d4d4230755eefc6c92742e341da39dadbf0fb4764cc8491cbf1e1d32fd3f&w=1060");
-  background-size: cover; /* Para cobrir todo o fundo */
-  background-position: center; /* Centralizar a imagem de fundo */
-  background-repeat: no-repeat; /* Não repetir a imagem */
-
   background-color: #f8f1f1;
   text-align: center;
   padding-top: 50px;
+  margin: 0; /* Remove margens padrão do body */
 }
 
-h1,
-h2,
-h3 {
-  color: #333;
-}
-
+/* Container principal */
 .container {
-  max-width: 600px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-li {
-  margin: 10px 0;
-}
-
-h1,
-h2,
-h3 {
+/* Estilos do título */
+h1 {
   color: #333;
+  margin-bottom: 20px;
 }
 
-pre {
-  background-color: #f4f4f4;
-  padding: 10px;
-  border: 1px solid #ddd;
-  overflow-x: auto;
-}
-
-code {
-  font-family: "Courier New", Courier, monospace;
-}
-
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  background-color: white;
-  padding: 20px;
+/* Estilos da barra de menu */
+.sidebar {
+  position: relative; /* Posiciona abaixo do título */
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo da barra */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Aumenta a largura da barra */
+  overflow: hidden; /* Esconde os botões inicialmente */
+  transition: max-height 0.3s ease, width 0.3s ease; /* Transições suaves para altura e largura */
+  max-height: 50px; /* Altura inicial da barra */
 }
 
+/* Expande verticalmente ao passar o mouse */
+.sidebar:hover {
+  max-height: 500px; /* Aumenta a altura expandida ao passar o mouse para mostrar todos os botões */
+  width: 300px; /* Largura aumentada ao passar o mouse */
+}
+
+/* Estilo do botão de menu */
+.toggle-button {
+  padding: 10px; /* Espaçamento interno */
+  background-color: transparent; /* Cor de fundo transparente */
+  color: white; /* Cor do texto */
+  border: 1px solid #ffffff; /* Borda branca */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Mão ao passar o mouse */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+  width: 100%; /* Ocupa toda a largura da barra */
+}
+
+/* Cor do botão de menu ao passar o mouse */
+.toggle-button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Fundo claro ao passar o mouse */
+}
+
+/* Expande verticalmente ao passar o mouse */
+.sidebar:hover {
+  max-height: 400px; /* Altura expandida ao passar o mouse para mostrar todos os botões */
+  width: 250px; /* Largura aumentada ao passar o mouse */
+}
+
+/* Container dos botões */
 .button-container {
-  display: flex; /* Usar flexbox */
-  flex-direction: column; /* Colocar os botões em coluna */
-  align-items: center; /* Centralizar horizontalmente */
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
+/* Estilos dos botões */
 .btn {
-  padding: 10px 20px;
-  margin: 10px 0; /* Margem vertical para espaçamento */
-  font-size: 16px;
+  padding: 10px;
+  margin: 2px 0; /* Margem vertical para espaçamento */
+  font-size: 16px; /* Tamanho da fonte dos botões */
   cursor: pointer;
-  background-color: #007bff; /* Azul padrão */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Botões ocupam toda a largura */
-  max-width: 300px; /* Largura máxima para os botões */
+  background-color: #007bff; /* Cor de fundo dos botões */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+  width: 100%; /* Botões ocupam 100% da largura da barra lateral */
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Azul mais escuro no hover */
+  background-color: #0056b3; /* Cor ao passar o mouse */
 }
