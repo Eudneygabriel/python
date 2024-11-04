@@ -1,17 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrutura do Processador</title>
+    <title>Processador</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles15.css') }}">
 </head>
 <body>
-
     <header>
-        <h1>Estrutura de um Processador de Computador</h1>
-        <p>A estrutura de um processador de computador é composta por diversos componentes interligados que permitem a execução de instruções e o processamento de dados. Os principais elementos da estrutura de um processador incluem:</p>
+        <h1>Processador</h1>
     </header>
+    <section>
+        <p>Um processador, também conhecido como CPU (Unidade Central de Processamento), é o componente principal de um computador responsável por executar instruções de programas e processar dados. Ele realiza operações aritméticas, lógicas e de controle, coordenando as atividades dos outros componentes do sistema.</p>
+    </section>
+
+    <section>
+        <h2>Estrutura de um Processador de Computador</h2>
+        <p>A estrutura de um processador de computador é composta por diversos componentes interligados que permitem a execução de instruções e o processamento de dados. Os principais elementos da estrutura de um processador incluem:</p>
+    </section>
 
     <section>
         <h2>Componentes do Processador</h2>
@@ -63,7 +69,7 @@
     </section>
 
     <section>
-        <h2>Resumo do Fluxo de Opessração</h2>
+        <h2>Resumo do Fluxo de Operação</h2>
         <ol>
             <li>Buscar Instrução: A UC busca a instrução de soma e os dados da memória.</li>
             <li>Decodificar Instrução: A UC interpreta a instrução “ADD” e ativa a ULA para somar os valores.</li>
@@ -73,6 +79,5 @@
         </ol>
         <p>Nesse exemplo simples, a Unidade de Controle e a ULA trabalham em sincronia, garantindo que os dados certos sejam processados corretamente.</p>
     </section>
-    
 </body>
 </html>
