@@ -1,87 +1,114 @@
+/* Fundo de vídeo */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
 body {
   font-family: Arial, sans-serif;
-
-  background-image: url("https://img.freepik.com/fotos-gratis/parede-de-concreto_53876-88973.jpg?t=st=1728897913~exp=1728901513~hmac=d604d4d4230755eefc6c92742e341da39dadbf0fb4764cc8491cbf1e1d32fd3f&w=1060");
-  background-size: cover; /* Para cobrir todo o fundo */
-  background-position: center; /* Centralizar a imagem de fundo */
-  background-repeat: no-repeat; /* Não repetir a imagem */
-
   background-color: #f8f1f1;
   text-align: center;
-  padding-top: 50px;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1,
-h2,
-h3 {
-  color: #333;
-}
-
+/* Container principal */
 .container {
-  max-width: 600px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-li {
-  margin: 10px 0;
-}
-
-h1,
-h2,
-h3 {
-  color: #333;
-}
-
-pre {
-  background-color: #f4f4f4;
-  padding: 10px;
-  border: 1px solid #ddd;
-  overflow-x: auto;
-}
-
-code {
-  font-family: "Courier New", Courier, monospace;
-}
-
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  background-color: white;
-  padding: 20px;
+/* Barra de menu fechada */
+.sidebar {
+  background-color: black; /* Cor inicial da barra */
+  color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Largura da barra */
+  overflow: hidden;
+  transition: max-height 0.3s ease, width 0.3s ease, background-color 1s ease;
+  max-height: 70px; /* Altura inicial da barra */
+  animation: colorChange 4s infinite alternate; /* Animação de troca de cor */
+  text-align: center;
 }
 
+/* Animação de troca de cores */
+@keyframes colorChange {
+  0% {
+    background-color: #f1c40f; /* Amarelo */
+  }
+  33% {
+    background-color: #e74c3c; /* Vermelho */
+  }
+  66% {
+    background-color: #ed740a; /* Branco */
+  }
+  100% {
+    background-color: #2ecc71; /* Verde */
+  }
+}
+/* Barra de menu aberta */
+.sidebar:hover {
+  background-color: white; /* Cor da barra quando aberta */
+  color: black;
+  max-height: 700px; /* Aumenta a altura quando aberta */
+  width: 250px; /* Largura expandida */
+  animation: none; /* Remove animação de cor ao abrir */
+}
+
+/* Estilo do botão de menu */
+.toggle-button {
+  padding: 15px 0; /* Aumenta o espaçamento vertical e remove o espaçamento lateral */
+  background-color: transparent; /* Cor de fundo transparente */
+  color: black; /* Cor do texto "Menu" */
+  font-weight: bold; /* Negrito para o texto */
+  border: none; /* Remove a borda */
+  font-size: 20px; /* Aumenta o tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  width: 100%; /* Ocupa toda a largura da barra */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  line-height: 1.5; /* Ajusta a altura da linha para melhor centralização vertical */
+}
+
+/* Certifique-se de que a barra de menu tenha altura suficiente */
+.sidebar {
+  max-height: 70px; /* Altura inicial da barra */
+  padding: 0; /* Remove o espaçamento interno da barra */
+}
+
+/* Container dos botões */
 .button-container {
-  display: flex; /* Usar flexbox */
-  flex-direction: column; /* Colocar os botões em coluna */
-  align-items: center; /* Centralizar horizontalmente */
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 10px; /* Espaço entre o título "Menu" e os botões */
 }
 
+/* Estilos dos botões */
 .btn {
-  padding: 10px 20px;
-  margin: 10px 0; /* Margem vertical para espaçamento */
+  padding: 15px; /* Aumenta o padding para mais espaço */
+  margin: 10px 0; /* Aumenta a margem entre os botões */
   font-size: 16px;
   cursor: pointer;
-  background-color: #007bff; /* Azul padrão */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Botões ocupam toda a largura */
-  max-width: 300px; /* Largura máxima para os botões */
+  background-color: #007bff; /* Cor de fundo dos botões */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  width: 100%; /* Botões ocupam 100% da largura da barra lateral */
+  transition: background-color 0.3s ease; /* Transição suave na cor ao passar o mouse */
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Azul mais escuro no hover */
+  background-color: #0056b3; /* Cor ao passar o mouse */
 }
