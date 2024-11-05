@@ -52,7 +52,7 @@ def pagina8():
 def pagina9():
     return render_template('PGD.html')
 
-#pagina 1
+#pagina 10
 @app.route('/pagina10')
 def pagina10():
     return render_template('Documentaçao.html')
@@ -61,7 +61,6 @@ def pagina10():
 @app.route('/pagina11')
 def pagina11():
     return render_template('Organização de um Computador.html')
-
 
 #pagina 12
 @app.route('/pagina12')
