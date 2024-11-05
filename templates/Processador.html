@@ -1,70 +1,117 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrutura do Processador</title>
+    <title>Processador</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles15.css') }}">
 </head>
 <body>
+    <header>
+        <h1>Processador</h1>
+    </header>
+    <section>
+        <p>Um processador, também conhecido como CPU (Unidade Central de Processamento), é o componente principal de um computador responsável por executar instruções de programas e processar dados. Ele realiza operações aritméticas, lógicas e de controle, coordenando as atividades dos outros componentes do sistema.</p>
+    </section>
 
-    <h1>Estrutura de um Processador de Computador</h1>
-    <p>A estrutura de um processador de computador é composta por diversos componentes interligados que permitem a execução de instruções e processamento de dados. Os principais elementos da estrutura de um processador incluem:</p>
+    <section>
+        <h2>Estrutura de um Processador de Computador</h2>
+        <p>A estrutura de um processador de computador é composta por diversos componentes interligados que permitem a execução de instruções e o processamento de dados. Os principais elementos da estrutura de um processador incluem:</p>
+    </section>
+    <section>
+       <h3>Unidade de Controle (CU)</h3>
+        <ul>
+            <li>A Unidade de Controle gerencia e controla o funcionamento do processador, interpretando as instruções e enviando sinais para outros componentes para que as operações sejam executadas na ordem correta. Ela funciona como o "cérebro" que orienta o fluxo de dados e instruções.</li>
+        </ul>
+        <h3>Unidade Lógica e Aritmética (ALU)</h3>
+        <ul><li>
+            A ALU é responsável pelas operações matemáticas e lógicas, como adição, subtração, multiplicação e comparações (igualdade, maior ou menor). Ela recebe os dados da Unidade de Controle e realiza os cálculos necessários.
+        </li></ul>
+        <h3> Registradores</h3>
+        <ul>
+            <li>São pequenas memórias de alta velocidade dentro do processador que armazenam temporariamente dados e instruções que estão sendo processados. Registradores ajudam a aumentar a eficiência, mantendo os dados de uso frequente prontos para acesso imediato pela ALU ou pela Unidade de Controle.</li>
+        </ul>
+        <h3>Cache</h3>
+        <ul>
+            <li>A memória cache é uma memória pequena e muito rápida que armazena dados e instruções usados frequentemente pelo processador. Ela diminui o tempo de acesso às informações, pois evita que o processador precise buscar dados diretamente na RAM, que é mais lenta.</li>
+        </ul>
+        <h3>Decodificador de Instruções</h3>
+        <ul>
+            <li>O decodificador de instruções interpreta as instruções que chegam à CPU, traduzindo-as em comandos que a ALU e a Unidade de Controle podem entender e processar. Ele é essencial para que o processador saiba exatamente o que deve fazer com os dados recebidos.</li>
+        </ul>
+        <h3> Clock Interno</h3>
+        <ul>
+            <li>O clock interno define a velocidade com que o processador executa as instruções, medindo o número de ciclos por segundo (medidos em Hertz). Ele sincroniza as operações do processador e de outros componentes, garantindo que o sistema funcione de maneira coordenada.</li>
+        </ul>
+        <h3>Barramento de Dados</h3>
+        <ul>
+            <li>O barramento de dados é um canal de comunicação bidirecional que permite a transferência de dados entre a CPU, a memória e outros dispositivos de entrada e saída de um sistema computacional. Sua largura (como 32 bits ou 64 bits) determina a quantidade de dados que podem ser transferidos ao mesmo tempo, afetando diretamente o desempenho do sistema.</li>
+        </ul>
+        <h3>Barramento de Endereços</h3>
+        <ul>
+            <li>O barramento de endereços é um canal de comunicação unidirecional usado pela CPU para especificar o endereço de memória ou o endereço de um dispositivo específico com o qual deseja interagir. A largura do barramento de endereços (por exemplo, 32 bits, 64 bits) define o espaço de endereçamento máximo que o processador pode acessar diretamente, ou seja, a quantidade total de memória acessível.</li>
+        </ul>
+    </section>
 
-    <ul>
-        <li><strong>Unidade de Controle (UC):</strong> Responsável por gerenciar e coordenar todas as operações do processador.</li>
-        <li><strong>Unidade Lógica e Aritmética (ULA):</strong> Realiza operações matemáticas e lógicas.</li>
-        <li><strong>Registradores:</strong> Pequenas áreas de armazenamento rápido usadas para guardar dados temporários e instruções em execução.</li>
-        <li><strong>Cache:</strong> Memória interna de alta velocidade usada para armazenar dados e instruções frequentemente acessadas.</li>
-        <li><strong>Clock (Relógio):</strong> Define a velocidade com que o processador executa as instruções.</li>
-        <li><strong>Barramento de Dados e Barramento de Endereços:</strong> Canais que permitem a comunicação entre o processador e outros componentes.</li>
-        <li><strong>Decodificador de Instruções:</strong> Interpreta e traduz as instruções recebidas para comandos que a UC e a ULA possam executar.</li>
-    </ul>
+    <section>
+        <h2>Componentes do Processador</h2>
+        <ul>
+            <li><strong>Unidade de Controle (UC):</strong> Responsável por gerenciar e coordenar todas as operações do processador.</li>
+            <li><strong>Unidade Lógica e Aritmética (ULA):</strong> Realiza operações matemáticas e lógicas.</li>
+            <li><strong>Registradores:</strong> Pequenas áreas de armazenamento rápido usadas para guardar dados temporários e instruções em execução.</li>
+            <li><strong>Cache:</strong> Memória interna de alta velocidade usada para armazenar dados e instruções frequentemente acessadas.</li>
+            <li><strong>Clock (Relógio):</strong> Define a velocidade com que o processador executa as instruções.</li>
+            <li><strong>Barramento de Dados e Barramento de Endereços:</strong> Canais que permitem a comunicação entre o processador e outros componentes.</li>
+            <li><strong>Decodificador de Instruções:</strong> Interpreta e traduz as instruções recebidas para comandos que a UC e a ULA possam executar.</li>
+        </ul>
+    </section>
 
-    <h2>Funcionamento Interno de um Processador: Exemplo de Soma de Dois Números</h2>
-    <p>Vamos descrever como a Unidade de Controle (UC) e a Unidade Lógica e Aritmética (ULA) trabalham juntas para realizar a soma de dois números, como 3 e 5.</p>
+    <section>
+        <h2>Funcionamento Interno de um Processador: Exemplo de Soma de Dois Números</h2>
+        <p>Vamos descrever como a Unidade de Controle (UC) e a Unidade Lógica e Aritmética (ULA) trabalham juntas para realizar a soma de dois números, como 3 e 5.</p>
 
-    <div class="exemplo">
-        <h3>Passo a Passo da Soma</h3>
+        <div class="exemplo">
+            <h3>Passo a Passo da Soma</h3>
+            <ol>
+                <li><strong>Carregar a Instrução e os Dados:</strong>
+                    <ul>
+                        <li>A UC lê a instrução de “ADD” da memória e recupera os números (3 e 5), carregando-os nos registradores internos.</li>
+                    </ul>
+                </li>
+                <li><strong>Decodificação da Instrução:</strong>
+                    <ul>
+                        <li>A UC decodifica a instrução “ADD” e informa a ULA que a operação a ser executada é uma soma.</li>
+                    </ul>
+                </li>
+                <li><strong>Execução da Operação na ULA:</strong>
+                    <ul>
+                        <li>A ULA soma os valores 3 e 5, resultando em 8.</li>
+                    </ul>
+                </li>
+                <li><strong>Armazenamento do Resultado:</strong>
+                    <ul>
+                        <li>O resultado 8 é armazenado em um registrador ou enviado à memória, conforme exigido.</li>
+                    </ul>
+                </li>
+                <li><strong>Incremento do Contador de Programa:</strong>
+                    <ul>
+                        <li>A UC incrementa o contador de programa para apontar para a próxima instrução a ser executada.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h2>Resumo do Fluxo de Operação</h2>
         <ol>
-            <li><strong>Carregar a Instrução e os Dados:</strong>
-                <ul>
-                    <li>A UC lê a instrução de “ADD” da memória e recupera os números (3 e 5), carregando-os nos registradores internos.</li>
-                </ul>
-            </li>
-            <li><strong>Decodificação da Instrução:</strong>
-                <ul>
-                    <li>A UC decodifica a instrução “ADD” e informa a ULA que a operação a ser executada é uma soma.</li>
-                </ul>
-            </li>
-            <li><strong>Execução da Operação na ULA:</strong>
-                <ul>
-                    <li>A ULA soma os valores 3 e 5, resultando em 8.</li>
-                </ul>
-            </li>
-            <li><strong>Armazenamento do Resultado:</strong>
-                <ul>
-                    <li>O resultado 8 é armazenado em um registrador ou enviado à memória, conforme exigido.</li>
-                </ul>
-            </li>
-            <li><strong>Incremento do Contador de Programa:</strong>
-                <ul>
-                    <li>A UC incrementa o contador de programa para apontar para a próxima instrução a ser executada.</li>
-                </ul>
-            </li>
+            <li>Buscar Instrução: A UC busca a instrução de soma e os dados da memória.</li>
+            <li>Decodificar Instrução: A UC interpreta a instrução “ADD” e ativa a ULA para somar os valores.</li>
+            <li>Executar Operação: A ULA realiza a soma 3 + 5 = 8.</li>
+            <li>Armazenar Resultado: O resultado é armazenado em um registrador ou na memória.</li>
+            <li>Preparar Próxima Instrução: O contador de programa é atualizado para continuar a execução.</li>
         </ol>
-    </div>
-
-    <h2>Resumo do Fluxo de Operação</h2>
-    <ol>
-        <li>Buscar Instrução: A UC busca a instrução de soma e os dados da memória.</li>
-        <li>Decodificar Instrução: A UC interpreta a instrução “ADD” e ativa a ULA para somar os valores.</li>
-        <li>Executar Operação: A ULA realiza a soma 3 + 5 = 8.</li>
-        <li>Armazenar Resultado: O resultado é armazenado em um registrador ou na memória.</li>
-        <li>Preparar Próxima Instrução: O contador de programa é atualizado para continuar a execução.</li>
-    </ol>
-
-    <p>Nesse exemplo simples, a Unidade de Controle e a ULA trabalham em sincronia, garantindo que os dados certos sejam processados corretamente.</p>
-    
+        <p>Nesse exemplo simples, a Unidade de Controle e a ULA trabalham em sincronia, garantindo que os dados certos sejam processados corretamente.</p>
+    </section>
 </body>
 </html>
