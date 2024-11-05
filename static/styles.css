@@ -5,77 +5,86 @@
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+  z-index: -1;
   object-fit: cover;
-  filter: brightness(50%); /* Ajuste opcional de brilho para melhor contraste */
+  filter: brightness(50%);
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f1f1;
   text-align: center;
-  padding-top: 50px;
-  margin: 0; /* Remove margens padrão do body */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Container principal */
 .container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-/* Estilos do título */
-h1 {
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Estilos da barra de menu */
+/* Barra de menu fechada */
 .sidebar {
-  position: relative; /* Posiciona abaixo do título */
-  background-color: rgba(255, 255, 255, 0.8); /* Fundo da barra */
+  background-color: black; /* Cor inicial da barra */
+  color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 250px; /* Aumenta a largura da barra */
-  overflow: hidden; /* Esconde os botões inicialmente */
-  transition: max-height 0.3s ease, width 0.3s ease; /* Transições suaves para altura e largura */
-  max-height: 50px; /* Altura inicial da barra */
+  width: 200px; /* Largura da barra */
+  overflow: hidden;
+  transition: max-height 0.3s ease, width 0.3s ease, background-color 1s ease;
+  max-height: 70px; /* Altura inicial da barra */
+  animation: colorChange 4s infinite alternate; /* Animação de troca de cor */
+  text-align: center;
 }
 
-/* Expande verticalmente ao passar o mouse */
+/* Animação de troca de cores */
+@keyframes colorChange {
+  0% {
+    background-color: #f1c40f; /* Amarelo */
+  }
+  33% {
+    background-color: #e74c3c; /* Vermelho */
+  }
+  66% {
+    background-color: #ed740a; /* Branco */
+  }
+  100% {
+    background-color: #2ecc71; /* Verde */
+  }
+}
+/* Barra de menu aberta */
 .sidebar:hover {
-  max-height: 500px; /* Aumenta a altura expandida ao passar o mouse para mostrar todos os botões */
-  width: 300px; /* Largura aumentada ao passar o mouse */
+  background-color: white; /* Cor da barra quando aberta */
+  color: black;
+  max-height: 700px; /* Aumenta a altura quando aberta */
+  width: 250px; /* Largura expandida */
+  animation: none; /* Remove animação de cor ao abrir */
 }
 
 /* Estilo do botão de menu */
 .toggle-button {
-  padding: 10px; /* Espaçamento interno */
+  padding: 15px 0; /* Aumenta o espaçamento vertical e remove o espaçamento lateral */
   background-color: transparent; /* Cor de fundo transparente */
-  color: white; /* Cor do texto */
-  border: 1px solid #ffffff; /* Borda branca */
-  border-radius: 5px; /* Bordas arredondadas */
-  cursor: pointer; /* Mão ao passar o mouse */
-  font-size: 16px; /* Tamanho da fonte */
-  transition: background-color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+  color: black; /* Cor do texto "Menu" */
+  font-weight: bold; /* Negrito para o texto */
+  border: none; /* Remove a borda */
+  font-size: 20px; /* Aumenta o tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
   width: 100%; /* Ocupa toda a largura da barra */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  line-height: 1.5; /* Ajusta a altura da linha para melhor centralização vertical */
 }
 
-/* Cor do botão de menu ao passar o mouse */
-.toggle-button:hover {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* Fundo claro ao passar o mouse */
-}
-
-/* Expande verticalmente ao passar o mouse */
-.sidebar:hover {
-  max-height: 400px; /* Altura expandida ao passar o mouse para mostrar todos os botões */
-  width: 250px; /* Largura aumentada ao passar o mouse */
+/* Certifique-se de que a barra de menu tenha altura suficiente */
+.sidebar {
+  max-height: 70px; /* Altura inicial da barra */
+  padding: 0; /* Remove o espaçamento interno da barra */
 }
 
 /* Container dos botões */
@@ -83,20 +92,21 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  margin-top: 10px; /* Espaço entre o título "Menu" e os botões */
 }
 
 /* Estilos dos botões */
 .btn {
-  padding: 10px;
-  margin: 2px 0; /* Margem vertical para espaçamento */
-  font-size: 16px; /* Tamanho da fonte dos botões */
+  padding: 15px; /* Aumenta o padding para mais espaço */
+  margin: 10px 0; /* Aumenta a margem entre os botões */
+  font-size: 16px;
   cursor: pointer;
   background-color: #007bff; /* Cor de fundo dos botões */
   color: white; /* Cor do texto */
   border: none; /* Sem borda */
   border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s ease; /* Transição suave na cor ao passar o mouse */
   width: 100%; /* Botões ocupam 100% da largura da barra lateral */
+  transition: background-color 0.3s ease; /* Transição suave na cor ao passar o mouse */
 }
 
 .btn:hover {
