@@ -193,8 +193,7 @@ button {
 button:hover {
   background-color: #45a049;
 }
-
-/* Modal (popup) */
+/* Estilo adicional para garantir o funcionamento sem JS */
 .modal {
   display: none;
   position: fixed;
@@ -206,35 +205,32 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-
-/* Conteúdo do Modal */
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 80%;
-  text-align: center;
+ /* Garantir que a imagem ocupe 100% do modal, mas sem ultrapassar a tela */
+ .modal-body img {
+  width: 100%;  /* Faz a imagem ocupar toda a largura do modal */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
-.modal-content img {
+.modal:target {
+  display: flex;
+}
+  /* Caso o diagrama seja maior, garantindo que o modal tenha uma largura adequada */
+  .modal-dialog {
+    max-width: 90%;  /* Ajusta a largura máxima do modal */
+  }
+  .modal-content {
+    max-height: 90vh; /* 90% da altura da tela */
+  }
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.img-fluid {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
-}
-
-/* Botão de Fechar */
-.close {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.close:hover {
-  background-color: #d32f2f;
-}
+}} 
