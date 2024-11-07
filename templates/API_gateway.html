@@ -1,105 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentação de API Gateway</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles6.css') }}">
-    <meta name="description" content="Documentação e introdução ao API Gateway, um componente essencial na arquitetura de microserviços.">
-    <meta name="keywords" content="API Gateway, Microserviços, Arquitetura de Software, Integração de Sistemas">
-    <meta name="author" content="Seu Nome">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='API_gateway.css') }}"
+    />
+    <meta
+      name="description"
+      content="Documentação e introdução ao API Gateway, um componente essencial na arquitetura de microserviços."
+    />
+    <meta
+      name="keywords"
+      content="API Gateway, Microserviços, Arquitetura de Software, Integração de Sistemas"
+    />
+    <meta name="author" content="Seu Nome" />
+  </head>
+  <body>
     <!-- Cabeçalho da Página -->
     <header class="container">
-        <h1>API Gateway</h1>
+      <h1>API Gateway</h1>
     </header>
 
     <!-- Conteúdo Principal -->
     <main class="container">
-        <!-- Seção de Introdução -->
-        <section>
-            <h2>Introdução</h2>
-            <p>
-                Num mundo cada vez mais conectado, onde aplicações e sistemas precisam se comunicar, surge um componente essencial para garantir a fluidez e segurança dessas interações: o <strong>API Gateway</strong>.
-            </p>
-            <p>
-                Para entender o papel do API Gateway, precisamos saber o que significa API, ou Application Programming Interface. Uma API é um conjunto de regras que permite que diferentes aplicações se comuniquem entre si, como uma ponte que conecta diferentes serviços.
-            </p>
-        </section>
+      <!-- Seção de Introdução -->
+      <section>
+        <h2>Introdução</h2>
+        <p>
+          Num mundo cada vez mais conectado, onde aplicações e sistemas precisam
+          se comunicar, surge um componente essencial para garantir a fluidez e
+          segurança dessas interações: o <strong>API Gateway</strong>.
+        </p>
+        <p>
+          Para entender o papel do API Gateway, precisamos saber o que significa
+          API, ou Application Programming Interface. Uma API é um conjunto de
+          regras que permite que diferentes aplicações se comuniquem entre si,
+          como uma ponte que conecta diferentes serviços.
+        </p>
+      </section>
 
-        <!-- Seção sobre o que é API Gateway -->
-        <section>
-            <h2>O que é um API Gateway?</h2>
-            <p>
-                O <strong>API Gateway</strong> atua como uma porta de entrada para serviços. Ele é o intermediário que controla como as APIs são expostas aos consumidores, garantindo que as solicitações sejam feitas de maneira segura, eficiente e controlada.
-            </p>
-            <p>
-                Com o aumento de serviços em arquiteturas baseadas em microserviços, a comunicação se torna mais complexa. O API Gateway centraliza as solicitações externas, recebendo as requisições do cliente e as distribuindo entre diferentes serviços, simplificando a gestão e reduzindo o tráfego direto.
-            </p>
-            <p>O API Gateway oferece funcionalidades essenciais como:</p>
-            <ul>
-                <li><strong>Autenticação e Autorização:</strong> Garante que apenas usuários autorizados acessem os recursos.</li>
-                <li><strong>Rate Limiting:</strong> Controla o número de requisições permitidas por período, protegendo o sistema.</li>
-                <li><strong>Load Balancing:</strong> Distribui o tráfego entre vários serviços, melhorando escalabilidade e desempenho.</li>
-                <li><strong>Cache:</strong> Armazena respostas de APIs, acelerando o tempo de resposta.</li>
-            </ul>
-        </section>
+      <!-- Seção sobre o que é API Gateway -->
+      <section>
+        <h2>O que é um API Gateway?</h2>
+        <p>
+          O <strong>API Gateway</strong> atua como uma porta de entrada para
+          serviços. Ele é o intermediário que controla como as APIs são expostas
+          aos consumidores, garantindo que as solicitações sejam feitas de
+          maneira segura, eficiente e controlada.
+        </p>
+        <p>
+          Com o aumento de serviços em arquiteturas baseadas em microserviços, a
+          comunicação se torna mais complexa. O API Gateway centraliza as
+          solicitações externas, recebendo as requisições do cliente e as
+          distribuindo entre diferentes serviços, simplificando a gestão e
+          reduzindo o tráfego direto.
+        </p>
+        <p>O API Gateway oferece funcionalidades essenciais como:</p>
+        <ul>
+          <li>
+            <strong>Autenticação e Autorização:</strong> Garante que apenas
+            usuários autorizados acessem os recursos.
+          </li>
+          <li>
+            <strong>Rate Limiting:</strong> Controla o número de requisições
+            permitidas por período, protegendo o sistema.
+          </li>
+          <li>
+            <strong>Load Balancing:</strong> Distribui o tráfego entre vários
+            serviços, melhorando escalabilidade e desempenho.
+          </li>
+          <li>
+            <strong>Cache:</strong> Armazena respostas de APIs, acelerando o
+            tempo de resposta.
+          </li>
+        </ul>
+      </section>
 
-        <!-- Seção sobre Benefícios -->
-        <section>
-            <h2>Benefícios do API Gateway</h2>
-            <p>
-                O API Gateway permite que as equipes se concentrem no desenvolvimento de cada microserviço de forma isolada, sem se preocupar com a comunicação externa. Ele é o guardião das integrações, garantindo que a simplicidade prevaleça para os usuários finais.
-            </p>
-            <p>Principais benefícios incluem:</p>
-            <ul>
-                <li><strong>Segurança Aprimorada:</strong> Centraliza a gestão de segurança.</li>
-                <li><strong>Redução de Complexidade:</strong> Fornece uma única interface para múltiplos serviços.</li>
-                <li><strong>Escalabilidade:</strong> Facilita a escalabilidade dos serviços.</li>
-                <li><strong>Manutenção Facilitada:</strong> Permite atualizações sem impactar consumidores.</li>
-                <li><strong>Melhoria na Experiência do Usuário:</strong> Acelera o tempo de resposta.</li>
-            </ul>
-        </section>
+      <!-- Seção sobre Benefícios -->
+      <section>
+        <h2>Benefícios do API Gateway</h2>
+        <p>
+          O API Gateway permite que as equipes se concentrem no desenvolvimento
+          de cada microserviço de forma isolada, sem se preocupar com a
+          comunicação externa. Ele é o guardião das integrações, garantindo que
+          a simplicidade prevaleça para os usuários finais.
+        </p>
+        <p>Principais benefícios incluem:</p>
+        <ul>
+          <li>
+            <strong>Segurança Aprimorada:</strong> Centraliza a gestão de
+            segurança.
+          </li>
+          <li>
+            <strong>Redução de Complexidade:</strong> Fornece uma única
+            interface para múltiplos serviços.
+          </li>
+          <li>
+            <strong>Escalabilidade:</strong> Facilita a escalabilidade dos
+            serviços.
+          </li>
+          <li>
+            <strong>Manutenção Facilitada:</strong> Permite atualizações sem
+            impactar consumidores.
+          </li>
+          <li>
+            <strong>Melhoria na Experiência do Usuário:</strong> Acelera o tempo
+            de resposta.
+          </li>
+        </ul>
+      </section>
 
-        <!-- Seção sobre Casos de Uso -->
-        <section>
-            <h2>Casos de Uso do API Gateway</h2>
-            <p>O API Gateway é utilizado em diversas situações, como:</p>
-            <ul>
-                <li><strong>Agregação de Múltiplas APIs:</strong> Combina várias APIs em uma única interface.</li>
-                <li><strong>Gerenciamento de Tráfego:</strong> Controla o fluxo de requisições.</li>
-                <li><strong>Implementação de Políticas de Segurança:</strong> Aplica regras de segurança consistentes.</li>
-                <li><strong>Transformação de Dados:</strong> Modifica dados conforme necessário.</li>
-                <li><strong>Suporte a Diferentes Protocolos:</strong> Facilita a integração com sistemas legados.</li>
-            </ul>
-        </section>
+      <!-- Seção sobre Casos de Uso -->
+      <section>
+        <h2>Casos de Uso do API Gateway</h2>
+        <p>O API Gateway é utilizado em diversas situações, como:</p>
+        <ul>
+          <li>
+            <strong>Agregação de Múltiplas APIs:</strong> Combina várias APIs em
+            uma única interface.
+          </li>
+          <li>
+            <strong>Gerenciamento de Tráfego:</strong> Controla o fluxo de
+            requisições.
+          </li>
+          <li>
+            <strong>Implementação de Políticas de Segurança:</strong> Aplica
+            regras de segurança consistentes.
+          </li>
+          <li>
+            <strong>Transformação de Dados:</strong> Modifica dados conforme
+            necessário.
+          </li>
+          <li>
+            <strong>Suporte a Diferentes Protocolos:</strong> Facilita a
+            integração com sistemas legados.
+          </li>
+        </ul>
+      </section>
 
-        <!-- Seção sobre Ferramentas Populares -->
-        <section>
-            <h2>Ferramentas Populares de API Gateway</h2>
-            <p>Algumas das ferramentas mais populares incluem:</p>
-            <ul>
-                <li><strong>NGINX:</strong> Servidor web que pode ser configurado como API Gateway.</li>
-                <li><strong>Kong:</strong> Plataforma de API Gateway de código aberto.</li>
-                <li><strong>Amazon API Gateway:</strong> Serviço gerenciado pela AWS.</li>
-                <li><strong>Apigee:</strong> Plataforma de gestão de APIs do Google Cloud.</li>
-                <li><strong>Microsoft Azure API Management:</strong> Serviço da Azure para APIs modernas e seguras.</li>
-            </ul>
-        </section>
+      <!-- Seção sobre Ferramentas Populares -->
+      <section>
+        <h2>Ferramentas Populares de API Gateway</h2>
+        <p>Algumas das ferramentas mais populares incluem:</p>
+        <ul>
+          <li>
+            <strong>NGINX:</strong> Servidor web que pode ser configurado como
+            API Gateway.
+          </li>
+          <li>
+            <strong>Kong:</strong> Plataforma de API Gateway de código aberto.
+          </li>
+          <li>
+            <strong>Amazon API Gateway:</strong> Serviço gerenciado pela AWS.
+          </li>
+          <li>
+            <strong>Apigee:</strong> Plataforma de gestão de APIs do Google
+            Cloud.
+          </li>
+          <li>
+            <strong>Microsoft Azure API Management:</strong> Serviço da Azure
+            para APIs modernas e seguras.
+          </li>
+        </ul>
+      </section>
 
-        <!-- Seção de Conclusão -->
-        <section>
-            <h2>Conclusão</h2>
-            <p>
-                O API Gateway é fundamental na arquitetura de microserviços, simplificando a comunicação entre serviços e clientes. Com a crescente adoção de arquiteturas distribuídas, entender e implementar um API Gateway eficaz é indispensável para garantir escalabilidade e segurança.
-            </p>
-        </section>
+      <!-- Seção de Conclusão -->
+      <section>
+        <h2>Conclusão</h2>
+        <p>
+          O API Gateway é fundamental na arquitetura de microserviços,
+          simplificando a comunicação entre serviços e clientes. Com a crescente
+          adoção de arquiteturas distribuídas, entender e implementar um API
+          Gateway eficaz é indispensável para garantir escalabilidade e
+          segurança.
+        </p>
+      </section>
     </main>
 
     <!-- Rodapé da Página -->
     <footer>
-        <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
     </footer>
-</body>
+  </body>
 </html>
