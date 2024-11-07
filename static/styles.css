@@ -50,18 +50,8 @@ body {
   z-index: 2; /* Coloca a barra de menu acima do título */
 }
 
-/* Expande a barra lateral ao passar o mouse */
 .sidebar:hover {
   width: 250px;
-}
-
-/* Menu container que aparece ao passar o mouse */
-.menu-container {
-  display: none; /* Inicialmente oculto */
-  flex-direction: column;
-  gap: 20px; /* Espaçamento entre os botões */
-  width: 100%;
-  padding-top: 20px;
 }
 
 /* Exibe o menu quando a barra lateral é expandida */
@@ -80,6 +70,21 @@ body {
   cursor: pointer;
   text-align: center;
   width: 100%;
+
+
+/* Menu container que aparece ao passar o mouse */
+.menu-container {
+  display: none; /* Inicialmente oculto */
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os botões */
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* Exibe o menu quando a classe show for adicionada */
+.sidebar .menu-container.show {
+  display: flex; /* Torna o menu visível */
+
 }
 
 /* Estilos dos botões */
@@ -124,4 +129,5 @@ body {
   position: relative;
   color: white;
   animation: pulse 3s infinite; /* Aplica a animação */
+
 }
