@@ -233,4 +233,58 @@ button:hover {
 .img-fluid {
   max-width: 100%;
   height: auto;
-}} 
+}
+
+  /* Estilo para as imagens lado a lado */
+  .imagem-container {
+    text-align: center; /* Centraliza as imagens */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* gap: 10px; Diminuir o espaçamento entre as imagens */
+  }
+
+ /* CSS para imagem pequena */
+ .img-thumbnail {
+  width: 200px;
+  margin-right: 10px; /* Reduzir o espaço entre as imagens */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block; /* Usar inline-block para as imagens ficarem lado a lado */
+}
+
+/* CSS para modal de imagem grande */
+.modal-imagem {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-imagem img {
+  max-width: 60%;
+  max-height: 70%;
+}
+
+/* CSS para botão de fechar */
+.modal-imagem .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Exibir modal */
+.modal-imagem.show {
+  display: flex;
+}
