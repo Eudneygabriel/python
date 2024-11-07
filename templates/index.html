@@ -19,12 +19,16 @@
       Seu navegador não suporta a tag de vídeo.
     </video>
 
+    <!-- Título centralizado -->
+    <h1 class="site-title">Site de Documentações</h1>
+
     <!-- Container principal -->
     <div class="container">
       <div class="sidebar">
-        <button class="toggle-button">Menu</button>
-        <!-- Botão "Menu" -->
-        <div class="button-container">
+        <!-- Botão de alternar menu -->
+        <button class="toggle-button" onclick="toggleMenu()">Menu</button>
+        <div class="menu-container">
+          <!-- Botões do menu -->
           <button class="btn" onclick="window.location.href='/pagina1'">
             Microservices
           </button>
@@ -55,6 +59,5 @@
         </div>
       </div>
     </div>
-    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
   </body>
 </html>
