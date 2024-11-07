@@ -12,103 +12,90 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f1f1;
-  text-align: center;
   margin: 0;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-/* Container principal */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Barra de menu fechada */
-.sidebar {
-  background-color: black; /* Cor inicial da barra */
+/* Título centralizado */
+.site-title {
+  font-size: 36px;
+  font-weight: bold;
+  z-index: 1; /* Coloca o título acima do fundo */
+  position: relative;
   color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 200px; /* Largura da barra */
-  overflow: hidden;
-  transition: max-height 0.3s ease, width 0.3s ease, background-color 1s ease;
-  max-height: 70px; /* Altura inicial da barra */
-  animation: colorChange 4s infinite alternate; /* Animação de troca de cor */
-  text-align: center;
 }
 
-/* Animação de troca de cores */
-@keyframes colorChange {
-  0% {
-    background-color: #f1c40f; /* Amarelo */
-  }
-  33% {
-    background-color: #e74c3c; /* Vermelho */
-  }
-  66% {
-    background-color: #ed740a; /* Branco */
-  }
-  100% {
-    background-color: #2ecc71; /* Verde */
-  }
-}
-/* Barra de menu aberta */
-.sidebar:hover {
-  background-color: white; /* Cor da barra quando aberta */
-  color: black;
-  max-height: 700px; /* Aumenta a altura quando aberta */
-  width: 250px; /* Largura expandida */
-  animation: none; /* Remove animação de cor ao abrir */
-}
-
-/* Estilo do botão de menu */
-.toggle-button {
-  padding: 15px 0; /* Aumenta o espaçamento vertical e remove o espaçamento lateral */
-  background-color: transparent; /* Cor de fundo transparente */
-  color: black; /* Cor do texto "Menu" */
-  font-weight: bold; /* Negrito para o texto */
-  border: none; /* Remove a borda */
-  font-size: 20px; /* Aumenta o tamanho da fonte */
-  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-  width: 100%; /* Ocupa toda a largura da barra */
-  text-align: center; /* Centraliza o texto horizontalmente */
-  line-height: 1.5; /* Ajusta a altura da linha para melhor centralização vertical */
-}
-
-/* Certifique-se de que a barra de menu tenha altura suficiente */
+/* Barra de menu lateral esquerda */
 .sidebar {
-  max-height: 70px; /* Altura inicial da barra */
-  padding: 0; /* Remove o espaçamento interno da barra */
-}
-
-/* Container dos botões */
-.button-container {
+  background-color: rgb(6, 16, 125);
+  color: white;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 60px;
+  height: 100vh;
+  padding: 10px;
+  transition: width 0.3s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  margin-top: 10px; /* Espaço entre o título "Menu" e os botões */
+  align-items: center;
+  gap: 10px;
+  z-index: 2; /* Coloca a barra de menu acima do título */
+}
+
+/* Expande a barra lateral quando o mouse passa */
+.sidebar:hover {
+  width: 250px;
+}
+
+/* Estilo do botão de menu principal */
+.toggle-button {
+  padding: 15px 0;
+  background-color: rgb(6, 16, 125);
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+/* Menu container que aparece ao passar o mouse */
+.menu-container {
+  display: none; /* Inicialmente oculto */
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os botões */
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* Exibe o menu quando a classe show for adicionada */
+.sidebar .menu-container.show {
+  display: flex; /* Torna o menu visível */
 }
 
 /* Estilos dos botões */
 .btn {
-  padding: 15px; /* Aumenta o padding para mais espaço */
-  margin: 10px 0; /* Aumenta a margem entre os botões */
-  font-size: 16px;
+  padding: 12px 10px; /* Aumenta o tamanho do botão */
+  font-size: 18px; /* Aumenta o tamanho da fonte */
   cursor: pointer;
-  background-color: #007bff; /* Cor de fundo dos botões */
-  color: white; /* Cor do texto */
-  border: none; /* Sem borda */
-  border-radius: 5px; /* Bordas arredondadas */
-  width: 100%; /* Botões ocupam 100% da largura da barra lateral */
-  transition: background-color 0.3s ease; /* Transição suave na cor ao passar o mouse */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: left;
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Cor ao passar o mouse */
+  background-color: #0056b3;
 }
