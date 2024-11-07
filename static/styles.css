@@ -50,9 +50,23 @@ body {
   z-index: 2; /* Coloca a barra de menu acima do título */
 }
 
-/* Expande a barra lateral quando o mouse passa */
+/* Expande a barra lateral ao passar o mouse */
 .sidebar:hover {
   width: 250px;
+}
+
+/* Menu container que aparece ao passar o mouse */
+.menu-container {
+  display: none; /* Inicialmente oculto */
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os botões */
+  width: 100%;
+  padding-top: 20px;
+}
+
+/* Exibe o menu quando a barra lateral é expandida */
+.sidebar:hover .menu-container {
+  display: flex; /* Torna o menu visível */
 }
 
 /* Estilo do botão de menu principal */
@@ -66,20 +80,6 @@ body {
   cursor: pointer;
   text-align: center;
   width: 100%;
-}
-
-/* Menu container que aparece ao passar o mouse */
-.menu-container {
-  display: none; /* Inicialmente oculto */
-  flex-direction: column;
-  gap: 20px; /* Espaçamento entre os botões */
-  width: 100%;
-  padding-top: 20px;
-}
-
-/* Exibe o menu quando a classe show for adicionada */
-.sidebar .menu-container.show {
-  display: flex; /* Torna o menu visível */
 }
 
 /* Estilos dos botões */
@@ -98,4 +98,30 @@ body {
 
 .btn:hover {
   background-color: #0056b3;
+}
+
+/* Animação de aumento/diminuição e mudança de cor */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: #818904;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #ff6347;
+  }
+  100% {
+    transform: scale(1);
+    color: #1705a0;
+  }
+}
+
+/* Título centralizado com animação responsiva */
+.site-title {
+  font-size: 5vw; /* Usa vw para um tamanho de fonte responsivo */
+  font-weight: bold;
+  z-index: 1; /* Coloca o título acima do fundo */
+  position: relative;
+  color: white;
+  animation: pulse 3s infinite; /* Aplica a animação */
 }
