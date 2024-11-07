@@ -59,6 +59,14 @@ body {
   display: flex; /* Torna o menu visível */
 }
 
+.menu-container {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-top: 20px;
+}
+
 /* Estilo do botão de menu principal */
 .toggle-button {
   padding: 15px 0;
@@ -70,7 +78,7 @@ body {
   cursor: pointer;
   text-align: center;
   width: 100%;
-
+}
 
 /* Menu container que aparece ao passar o mouse */
 .menu-container {
