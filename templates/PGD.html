@@ -3,13 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Documentação do Projeto Plataforma de Gerenciamento de Desempregados
-    </title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles4.css') }}"
-    />
+    <title>Documentação do Projeto Plataforma de Gerenciamento de Desempregados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles4.css') }}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
@@ -20,108 +15,105 @@
     <main class="container">
       <section id="introducao" class="introducao">
         <p>
-          A Plataforma de Gerenciamento de Desempregados visa conectar
-          candidatos ao mercado de trabalho, facilitando o processo de busca de
-          emprego. Empresas cadastradas têm acesso a currículos de indivíduos
-          que buscam oportunidades vocacionais, aumentando a eficiência nas
-          contratações.
+          A Plataforma de Gerenciamento de Desempregados visa conectar candidatos ao mercado de trabalho, facilitando o processo de busca de emprego. Empresas cadastradas têm acesso a currículos de indivíduos que buscam oportunidades vocacionais, aumentando a eficiência nas contratações.
         </p>
       </section>
 
       <section id="objetivo" class="topicos">
         <h2>1. Objetivo do Projeto</h2>
         <p>
-          A plataforma tem como objetivo principal gerenciar os cadastrados
-          desempregados e facilitar a sua conexão com empresas que buscam novos
-          talentos. A interface intuitiva permite que candidatos criem perfis
-          atrativos, aumentando suas chances de contratação.
+          A plataforma tem como objetivo principal gerenciar os cadastrados desempregados e facilitar a sua conexão com empresas que buscam novos talentos. A interface intuitiva permite que candidatos criem perfis atrativos, aumentando suas chances de contratação.
         </p>
       </section>
 
       <section id="tecnologia" class="topicos">
         <h2>2. Tecnologia Utilizada</h2>
         <p>
-          Para o projeto, usaremos as seguintes linguagens de programação
-          (Python, Java e C++) e como linguagem de marcação (HTML).
+          Para o projeto, usaremos as seguintes linguagens de programação (Python, Java e C++) e como linguagem de marcação (HTML).
         </p>
       </section>
 
       <section id="modelagem-dados" class="topicos">
         <h2>3. Perfis</h2>
         <p>
-          Após o registro, os desempregados devem criar de um perfil
-          profissional atrativo. Isso inclui descrever habilidades, experiências
-          anteriores e objetivos de carreira, aumentando as chances de serem
-          notados pelas empresas cadastradas.
+          Após o registro, os desempregados devem criar de um perfil profissional atrativo. Isso inclui descrever habilidades, experiências anteriores e objetivos de carreira, aumentando as chances de serem notados pelas empresas cadastradas.
         </p>
       </section>
 
       <section id="persistencia-dados" class="topicos">
         <h2>4. Análise de Dados e Gráficos</h2>
         <p>
-          A análise de dados desempenha um papel crucial na eficiência da
-          plataforma, permitindo a visualização de informações relevantes sobre
-          desemprego e contratações. Através de gráficos e estatísticas, é
-          possível identificar tendências e áreas que necessitam de melhorias.
+          A análise de dados desempenha um papel crucial na eficiência da plataforma, permitindo a visualização de informações relevantes sobre desemprego e contratações. Através de gráficos e estatísticas, é possível identificar tendências e áreas que necessitam de melhorias.
         </p>
       </section>
 
- <!-- <section id="diagrama"> -->
-  <!-- <h2>5. Diagrama de Funcionamento</h2> -->
-  Botão que funciona como link para abrir o modal
-  <!-- <a href="#modalDiagrama" class="btn btn-primary">Ver Diagrama</a> -->
-<!-- </section> -->
-<!--  -->
-Modal
-<!-- <div id="modalDiagrama" class="modal"> -->
-  <!-- <div class="modal-dialog"> -->
-    <!-- <div class="modal-content"> -->
-      <!-- <a href="#" class="btn-close">&times;</a> -->
-      <!-- <h5 class="modal-title">Diagrama de Funcionamento</h5> -->
-      <!-- <img src="{{ url_for('static', filename='diagrama.png') }}" alt="Diagrama 1" class="img-fluid" /> -->
-    <!-- </div> -->
-  <!-- </div> -->
-<!-- </div> -->
- 
+      <!-- <section id="diagrama"> -->
+        <!-- <h2>5. Diagramas de Funcionamento</h2> -->
+        Botões para abrir os modais
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDiagrama1"> -->
+          <!-- Ver Diagrama 1 -->
+        <!-- </button> -->
+        <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalDiagrama2"> -->
+          <!-- Ver Diagrama 2 -->
+        <!-- </button> -->
+      <!-- </section> -->
 
-      <!-- Exibição do diagrama -->
-      <section id="diagrama">
-        <h2>5. Diagrama de Funcionamento</h2>
-        <!-- Botão para abrir o modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDiagrama">
-          Ver Diagrama
-        </button>
-      </section>
+      Modal Diagrama 1
+      <!-- <div class="modal fade" id="modalDiagrama1" tabindex="-1" aria-labelledby="modalDiagrama1Label" aria-hidden="true"> -->
+        <!-- <div class="modal-dialog modal-lg"> -->
+          <!-- <div class="modal-content"> -->
+            <!-- <div class="modal-header"> -->
+              <!-- <h5 class="modal-title" id="modalDiagrama1Label">Diagrama de Funcionamento 1</h5> -->
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            <!-- </div> -->
+            <!-- <div class="modal-body text-center"> -->
+              <!-- <img src="{{ url_for('static', filename='diagrama.png') }}" alt="Diagrama 1" class="img-fluid" /> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
 
-      <!-- Modal -->
-      <div class="modal fade" id="modalDiagrama" tabindex="-1" aria-labelledby="modalDiagramaLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalDiagramaLabel">Diagrama de Funcionamento</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <img src="{{ url_for('static', filename='diagrama.png') }}" alt="Diagrama 1" class="img-fluid" />
-            </div>
-          </div>
-        </div>
-      </div>
+      Modal Diagrama 2
+      <!-- <div class="modal fade" id="modalDiagrama2" tabindex="-1" aria-labelledby="modalDiagrama2Label" aria-hidden="true"> -->
+        <!-- <div class="modal-dialog modal-lg"> -->
+          <!-- <div class="modal-content"> -->
+            <!-- <div class="modal-header"> -->
+              <!-- <h5 class="modal-title" id="modalDiagrama2Label">Diagrama de Funcionamento 2</h5> -->
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            <!-- </div> -->
+            <!-- <div class="modal-body text-center"> -->
+              <!-- <img src="{{ url_for('static', filename='diagrama2.png') }}" alt="Diagrama 2" class="img-fluid" /> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
 
+      <main class="container">
+        <section id="diagrama">
+          <h2>5. Diagrama de Funcionamento</h2>
+          <!-- Link para a imagem em tamanho grande -->
+          <a href="{{ url_for('imagem_grande', nome_imagem='diagrama.png') }}">
+            <img src="{{ url_for('static', filename='diagrama.png') }}" alt="Diagrama 1" class="img-thumbnail" style="width: 300px;" />
+          </a>
+        </section>
+
+        <section id="diagrama2">
+          <h2> Segundo Diagrama</h2>
+          <!-- Link para a segunda imagem em tamanho grande -->
+          <a href="{{ url_for('imagem_grande', nome_imagem='diagrama2.png') }}">
+            <img src="{{ url_for('static', filename='diagrama2.png') }}" alt="Diagrama 2" class="img-thumbnail" style="width: 300px;" />
+          </a>
+        </section>
 
       <section id="persistencia-dados" class="topicos">
-        <h2>6. Graficos</h2>
+        <h2>6. Gráficos</h2>
         <p>
-          A platafoma tambem apresentera graficos que mostraram em tempo real a
-          quantidade de empresas cadastradas e desmpregados cadastrados, que
-          contribuira para a promoção da platafoma ampliando a sua visibilidade
-          e aumentando seu destaque.
+          A plataforma também apresentará gráficos que mostram em tempo real a quantidade de empresas cadastradas e desempregados cadastrados, contribuindo para a promoção da plataforma e ampliando sua visibilidade.
         </p>
-
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
       </section>
+
+      <!-- Bootstrap Script -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
     </main>
   </body>
 </html>
