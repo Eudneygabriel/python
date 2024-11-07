@@ -120,3 +120,22 @@ h1 {
 .modal-content h3 {
   color: #007bff; /* Cor azul para cabeçalhos h3 dentro do modal */
 }
+
+/* Estilo para o botão de fechar (X) no modal */
+.close {
+  color: #aaa; /* Cor do botão de fechar */
+  font-size: 28px; /* Tamanho da fonte do botão de fechar */
+  font-weight: bold; /* Tamanho da fonte do botão de fechar */
+  position: absolute; /* Posiciona o botão de fechar no topo direito */
+  top: 10px;
+  right: 25px;
+  cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+}
+
+/* Estilo para o botão de fechar ao passar o mouse */
+.close:hover,
+.close:focus {
+  color: black; /* Muda a cor para preto quando passar o mouse */
+  text-decoration: none; /* Remove o sublinhado */
+  cursor: pointer; /* Muda o cursor para uma mão */
+}
