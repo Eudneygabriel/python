@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componentes do Computador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Componentes_do_Computador.css') }}" />
+</head>
+<body>
+    <h1>COMPONENTES DO COMPUTADOR</h1>
+
+    <div class="container">
+        <div class="content">
+            <p>O computador é composto por diversos componentes e a maioria está situada na placa-mãe (Motherboard).</p>
+            <!-- <ul> -->
+                <!-- <li><a href="#modal-slot-ide">Slot IDE</a></li> -->
+                <!-- <li><a href="#modal-conector-fonte-24pinos">Conector Fonte 24 pinos</a></li> -->
+                <!-- <li><a href="#modal-conector-sata">Conector SATA</a></li> -->
+                <!-- <li><a href="#modal-cpu">CPU</a></li> -->
+                <!-- <li><a href="#modal-chipset">Chipset</a></li> -->
+                <!-- <li><a href="#modal-Memoria-Ram">Memoria-RAM</a></li> -->
+            <!-- </ul> -->
+        </div>
+
+        <section>
+            <div class="image-gallery">
+                <a href="#modal"><img src="{{ url_for('static', filename='images/imagem.png') }}" alt="Motherboard" class="image-thumbnail" /></a>
+            </div>
+            <!-- Modais para cada imagem -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="{{ url_for('static', filename='images/imagem.png') }}" alt="Motherboard" />
+    </div>
+</div>
+            
+        </section>
+
+        <!-- <section> -->
+            <!-- <h3>Função do Slot IDE</h3> -->
+            <!-- <div class="image-gallery"> -->
+                <!-- <a href="#modal-slot-ide"><img src="{{ url_for('static', filename='images/imagen1.jpg') }}" alt="Slot IDE" class="image-thumbnail" /></a> -->
+            <!-- </div> -->
+            <!-- <ul class="text-content"> -->
+              <!-- <li> -->
+                <!-- <strong>Comunicação com o Disco:</strong> Permite a comunicação -->
+                <!-- entre a placa-mãe e o dispositivo... -->
+              <!-- </li> -->
+<!--              -->
+            <!-- </ul> -->
+            <!-- <div id="modal-slot-ide" class="modal"> -->
+                <!-- <div class="modal-content"> -->
+                    <!-- <a href="#" class="close-btn">&times;</a> -->
+                    <!-- <img src="{{ url_for('static', filename='images/imagen1.jpg') }}" alt="Slot IDE" /> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </section> -->
+        <section>
+            <h3>Função do Slot IDE</h3>
+            <div class="slot-ide-container">
+                <div class="image-gallery">
+                    <a href="#modal-slot-ide">
+                        <img src="{{ url_for('static', filename='images/imagen1.jpg') }}" alt="Slot IDE" class="image-thumbnail">
+                    </a>
+                </div>
+                <ul class="text-content">
+                    <li>
+                        <strong>Comunicação com o Disco:</strong> Permite a comunicação
+                        entre a placa-mãe e o dispositivo...
+                    </li>
+                    <!-- Outros itens -->
+                </ul>
+            </div>
+
+        <section>
+            <div class="image-gallery">
+                <a href="#modal-conector-fonte-24pinos"><img src="{{ url_for('static', filename='images/imagem3.jpg') }}" alt="Conector Fonte 24 pinos" class="image-thumbnail" /></a>
+            </div>
+            <div id="modal-conector-fonte-24pinos" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times;</a>
+                    <img src="{{ url_for('static', filename='images/imagem3.jpg') }}" alt="Conector Fonte 24 pinos" />
+                </div>
+
+        </section>
+
+        <section>
+            <div class="image-gallery">
+                <a href="#modal-conector-sata"><img src="{{ url_for('static', filename='images/imagem4.jpg') }}" alt="Conector SATA" class="image-thumbnail" /></a>
+            </div>
+            <div id="modal-conector-sata" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times;</a>
+                    <img src="{{ url_for('static', filename='images/imagem4.jpg') }}" alt="Conector SATA" />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="image-gallery">
+                <a href="#modal-cpu"><img src="{{ url_for('static', filename='images/imagem5.jpg') }}" alt="CPU" class="image-thumbnail" /></a>
+            </div>
+            <div id="modal-cpu" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times;</a>
+                    <img src="{{ url_for('static', filename='images/imagem5.jpg') }}" alt="CPU" />
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="image-gallery">
+                <a href="#modal-chipset"><img src="{{ url_for('static', filename='images/imagem6.jpg') }}" alt="Chipset" class="image-thumbnail" /></a>
+            </div>
+            <div id="modal-chipset" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times;</a>
+                    <img src="{{ url_for('static', filename='images/imagem6.jpg') }}" alt="Chipset" />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="image-gallery">
+                <a href="#modal-Memoria-Ram"><img src="{{ url_for('static', filename='images/imagem7.jpg') }}" alt="Memória RAM" class="image-thumbnail" /></a>
+            </div>
+            <div id="modal-Memoria-Ram" class="modal">
+                <div class="modal-content">
+                    <a href="#" class="close-btn">&times;</a>
+                    <img src="{{ url_for('static', filename='images/imagem7.jpg') }}" alt="Memória RAM" />
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>

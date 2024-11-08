@@ -1,0 +1,90 @@
+/* Estilo do corpo da página */
+body {
+  font-family: Arial, sans-serif; /* Define a fonte padrão como Arial ou uma fonte sans-serif */
+  background-color: #f0f4f8; /* Define a cor de fundo da página */
+  color: #333; /* Define a cor do texto */
+  line-height: 1.6; /* Define a altura da linha para melhor legibilidade */
+  margin: 0; /* Remove a margem padrão */
+  padding: 0; /* Remove o preenchimento padrão */
+}
+
+/* Estilo do título principal */
+h1 {
+  color: #fff; /* Define a cor do texto do título como branco */
+  background-color: #007bff; /* Define a cor de fundo do título como azul */
+  padding: 15px; /* Adiciona preenchimento interno ao título */
+  text-align: center; /* Centraliza o texto do título */
+  border-radius: 8px; /* Adiciona bordas arredondadas ao fundo do título */
+}
+
+/* Estilo do contêiner principal */
+.container {
+  max-width: 900px; /* Define a largura máxima do contêiner */
+  margin: 20px auto; /* Centraliza o contêiner na página com margens verticais */
+  background-color: #ffffff; /* Define a cor de fundo do contêiner como branco */
+  padding: 30px; /* Adiciona preenchimento interno ao contêiner */
+  border-radius: 10px; /* Adiciona bordas arredondadas ao contêiner */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao contêiner */
+}
+
+/* Estilo para o conteúdo do contêiner */
+.content {
+  display: flex; /* Usa flexbox para layout do conteúdo */
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  justify-content: space-between; /* Distribui espaço igual entre os itens */
+}
+
+/* Estilo para a parte de texto */
+.text {
+  flex: 1; /* Permite que a parte de texto ocupe o espaço restante */
+  margin-right: 20px; /* Adiciona margem à direita */
+}
+
+/* Estilo para imagens dentro do texto */
+.image {
+  width: 250px; /* Define uma largura fixa para a imagem */
+  max-width: 100%; /* A imagem não pode exceder 100% da largura do contêiner pai */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 5px; /* Adiciona bordas arredondadas à imagem */
+}
+ /* Estilos para imagem em miniatura */
+ .image-thumbnail {
+  width: 200px;
+  cursor: pointer;
+  margin: 10px;
+}
+/* Estilos para modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+/* Ativa o modal quando o target está no URL */
+.modal:target {
+  display: flex;
+}
+/* Conteúdo do modal */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+/* Botão de fechar modal */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+}
