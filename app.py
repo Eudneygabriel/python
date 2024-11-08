@@ -1,10 +1,9 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for # type: ignore
 
 app = Flask(__name__)
 
 # Variável global para controlar a visibilidade do menu
 show_menu = False
-
 @app.route('/')
 def index():
     # Passa o estado do menu e modais para o template
