@@ -12,21 +12,12 @@
     <div class="container">
         <div class="content">
             <p>O computador é composto por diversos componentes e a maioria está situada na placa-mãe (Motherboard).</p>
-            <!-- <ul> -->
-                <!-- <li><a href="#modal-slot-ide">Slot IDE</a></li> -->
-                <!-- <li><a href="#modal-conector-fonte-24pinos">Conector Fonte 24 pinos</a></li> -->
-                <!-- <li><a href="#modal-conector-sata">Conector SATA</a></li> -->
-                <!-- <li><a href="#modal-cpu">CPU</a></li> -->
-                <!-- <li><a href="#modal-chipset">Chipset</a></li> -->
-                <!-- <li><a href="#modal-Memoria-Ram">Memoria-RAM</a></li> -->
-            <!-- </ul> -->
         </div>
 
         <section>
             <div class="image-gallery">
                 <a href="#modal"><img src="{{ url_for('static', filename='images/imagem.png') }}" alt="Motherboard" class="image-thumbnail" /></a>
             </div>
-            <!-- Modais para cada imagem -->
 <div id="modal" class="modal">
     <div class="modal-content">
         <a href="#" class="close-btn">&times;</a>
@@ -35,26 +26,7 @@
 </div>
             
         </section>
-
-        <!-- <section> -->
-            <!-- <h3>Função do Slot IDE</h3> -->
-            <!-- <div class="image-gallery"> -->
-                <!-- <a href="#modal-slot-ide"><img src="{{ url_for('static', filename='images/imagen1.jpg') }}" alt="Slot IDE" class="image-thumbnail" /></a> -->
-            <!-- </div> -->
-            <!-- <ul class="text-content"> -->
-              <!-- <li> -->
-                <!-- <strong>Comunicação com o Disco:</strong> Permite a comunicação -->
-                <!-- entre a placa-mãe e o dispositivo... -->
-              <!-- </li> -->
-<!--              -->
-            <!-- </ul> -->
-            <!-- <div id="modal-slot-ide" class="modal"> -->
-                <!-- <div class="modal-content"> -->
-                    <!-- <a href="#" class="close-btn">&times;</a> -->
-                    <!-- <img src="{{ url_for('static', filename='images/imagen1.jpg') }}" alt="Slot IDE" /> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </section> -->
+        
         <section>
             <h3>Função do Slot IDE</h3>
             <div class="slot-ide-container">
@@ -68,11 +40,11 @@
                         <strong>Comunicação com o Disco:</strong> Permite a comunicação
                         entre a placa-mãe e o dispositivo...
                     </li>
-                    <!-- Outros itens -->
                 </ul>
             </div>
 
         <section>
+         <div class="slot-ide-container">
             <div class="image-gallery">
                 <a href="#modal-conector-fonte-24pinos"><img src="{{ url_for('static', filename='images/imagem3.jpg') }}" alt="Conector Fonte 24 pinos" class="image-thumbnail" /></a>
             </div>
@@ -81,6 +53,7 @@
                     <a href="#" class="close-btn">&times;</a>
                     <img src="{{ url_for('static', filename='images/imagem3.jpg') }}" alt="Conector Fonte 24 pinos" />
                 </div>
+         </div>
 
         </section>
 

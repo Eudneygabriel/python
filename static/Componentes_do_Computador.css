@@ -47,6 +47,12 @@ h1 {
   height: auto; /* Mantém a proporção da imagem */
   border-radius: 5px; /* Adiciona bordas arredondadas à imagem */
 }
+  /* Estilos para alinhar a imagem e o texto lado a lado */
+  .slot-ide-container {
+    display: flex;
+    align-items: flex-start;
+}
+
  /* Estilos para imagem em miniatura */
  .image-thumbnail {
   width: 200px;
