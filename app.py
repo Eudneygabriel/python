@@ -50,7 +50,7 @@ def pagina9():
 
 @app.route('/pagina10')
 def pagina10():
-    return render_template('Documentaçao.html')
+    return render_template('documentaçao.html')
 
 @app.route('/pagina11')
 def pagina11():
