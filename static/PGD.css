@@ -8,7 +8,7 @@ body {
 
 header {
   background: #007bff;
-  color: white;
+
   padding: 10px 0;
   text-align: center;
 }
@@ -22,6 +22,10 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+h1 {
+  color: #08031a; /* Alterando para azul */
+  text-align: center; /* Centraliza os títulos */
+}
 h2 {
   color: #08031a; /* Alterando para azul */
   text-align: center; /* Centraliza os títulos */
@@ -68,7 +72,8 @@ footer {
   margin: 0;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: #007bff;
   margin-bottom: 15px;
 }
@@ -86,7 +91,7 @@ header {
   text-align: center;
   padding: 20px 0;
   background-color: #007bff;
-  color: white;
+
   border-radius: 10px 10px 0 0;
 }
 
@@ -179,7 +184,7 @@ img:hover {
 
 /* Botões */
 button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -205,22 +210,22 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
- /* Garantir que a imagem ocupe 100% do modal, mas sem ultrapassar a tela */
- .modal-body img {
-  width: 100%;  /* Faz a imagem ocupar toda a largura do modal */
+/* Garantir que a imagem ocupe 100% do modal, mas sem ultrapassar a tela */
+.modal-body img {
+  width: 100%; /* Faz a imagem ocupar toda a largura do modal */
   height: auto; /* Mantém a proporção da imagem */
 }
 
 .modal:target {
   display: flex;
 }
-  /* Caso o diagrama seja maior, garantindo que o modal tenha uma largura adequada */
-  .modal-dialog {
-    max-width: 90%;  /* Ajusta a largura máxima do modal */
-  }
-  .modal-content {
-    max-height: 90vh; /* 90% da altura da tela */
-  }
+/* Caso o diagrama seja maior, garantindo que o modal tenha uma largura adequada */
+.modal-dialog {
+  max-width: 90%; /* Ajusta a largura máxima do modal */
+}
+.modal-content {
+  max-height: 90vh; /* 90% da altura da tela */
+}
 
 .btn-close {
   position: absolute;
@@ -235,16 +240,16 @@ button:hover {
   height: auto;
 }
 
-  /* Estilo para as imagens lado a lado */
-  .imagem-container {
-    text-align: center; /* Centraliza as imagens */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* gap: 10px; Diminuir o espaçamento entre as imagens */
-  }
+/* Estilo para as imagens lado a lado */
+.imagem-container {
+  text-align: center; /* Centraliza as imagens */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* gap: 10px; Diminuir o espaçamento entre as imagens */
+}
 
- /* CSS para imagem pequena */
- .img-thumbnail {
+/* CSS para imagem pequena */
+.img-thumbnail {
   width: 200px;
   margin-right: 10px; /* Reduzir o espaço entre as imagens */
   cursor: pointer;

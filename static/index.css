@@ -92,7 +92,6 @@ body {
 /* Exibe o menu quando a classe show for adicionada */
 .sidebar .menu-container.show {
   display: flex; /* Torna o menu visível */
-
 }
 
 /* Estilos dos botões */
@@ -137,5 +136,4 @@ body {
   position: relative;
   color: white;
   animation: pulse 3s infinite; /* Aplica a animação */
-
 }
