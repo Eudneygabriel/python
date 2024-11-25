@@ -5,7 +5,7 @@ app = Flask(__name__)
 # Variável global para controlar a visibilidade do menu
 show_menu = False
 @app.route('/')
-def index():
+def index():       
     # Passa o estado do menu e modais para o template
     return render_template('index.html', show_menu=show_menu)
 
